@@ -600,11 +600,11 @@ var HttpclientProvider = /** @class */ (function () {
 
 var map = {
 	"../components/selectanfang/selectanfang.module": [
-		305,
+		306,
 		6
 	],
 	"../pages/home/home.module": [
-		306,
+		307,
 		0
 	],
 	"../pages/login/login.module": [
@@ -612,19 +612,19 @@ var map = {
 		5
 	],
 	"../pages/sueimiang/sueimiang.module": [
-		307,
+		309,
 		4
 	],
 	"../pages/switchlight/switchlight.module": [
-		310,
+		311,
 		1
 	],
 	"../pages/switchrfwy/switchrfwy.module": [
-		309,
+		312,
 		2
 	],
 	"../pages/tabs/tabs.module": [
-		311,
+		310,
 		3
 	]
 };
@@ -1480,10 +1480,10 @@ var EquipmentProvider = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_host__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__filter_listfilter__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__filter_filter__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__filter_mystylewidth__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_host__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__filter_listfilter__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__filter_filter__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__filter_mystylewidth__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2024,6 +2024,10 @@ var SceneProvider = /** @class */ (function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + '/api/Scene/ExcuteScene';
         return this.http.post(url, { sceneId: sceneId, familyId: familyId }).map(this.extractData);
     };
+    SceneProvider.prototype.ExcuteScene = function (sceneName, familyId) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + '/api/Scene/Invoke/' + familyId + '?scene=' + sceneName;
+        return this.http.post(url, {}).map(this.extractData);
+    };
     SceneProvider.prototype.SetAnfang = function (name, familyId) {
         var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + '/api/Scene/SetAnfang';
         return this.http.post(url, { name: name, familyId: familyId }).map(this.extractData);
@@ -2287,7 +2291,7 @@ var UsercenterProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2380,7 +2384,7 @@ var DemoproviderProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2601,13 +2605,13 @@ var LechengProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(241);
 /// <reference path="../../typings/cordova-typings.d.ts"/> 
 
 
@@ -2616,7 +2620,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 240:
+/***/ 241:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2624,46 +2628,47 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__filter_auto_fit_layout__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__filter_auto_fit_layout__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipe_module__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autojob_autojob__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autojob_autojob__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_localstorage_localstorage__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_httpclient_httpclient__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_delay_delay__ = __webpack_require__(297);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_doorlock_doorlock__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_delay_delay__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_doorlock_doorlock__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_equipment_equipment__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_externalinterface_externalinterface__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_intelligent_intelligent__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_lecheng_lecheng__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_log_log__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_intelligent_intelligent__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_lecheng_lecheng__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_log_log__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_login_login__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_room_room__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_room_room__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_scene_scene__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_timing_timing__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_timing_timing__ = __webpack_require__(303);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_usercenter_usercenter__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_colorpicker_lib_color_picker_service__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_constants_constants__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_barcode_scanner__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_demoprovider_demoprovider__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_barcode_scanner__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_demoprovider_demoprovider__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_native_service_native_service__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_app_version__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_file__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_in_app_browser__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_file_transfer__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_native_audio__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_native_audio__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_media__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__event_eventemitter__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_file_opener__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_android_permissions__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_streaming_media__ = __webpack_require__(219);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2690,6 +2695,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //import { Host } from '../filter/host';//组合图片地址
  //组合图片地址
  //图片转换
+
 
 
 
@@ -2779,11 +2785,11 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../components/selectanfang/selectanfang.module#SelectanfangModule', name: 'selectanfang', segment: 'selectanfang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/switchrfwy/switchrfwy.module#SwitchrfwyPageModule', name: 'SwitchrfwyPage', segment: 'switchrfwy', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchlight/switchlight.module#SwitchlightPageModule', name: 'SwitchlightPage', segment: 'switchlight', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/switchrfwy/switchrfwy.module#SwitchrfwyPageModule', name: 'SwitchrfwyPage', segment: 'switchrfwy', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -2820,7 +2826,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__extended_extendedurlimg__["a" /* ExtendedUrlImg */],
                 __WEBPACK_IMPORTED_MODULE_28__components_colorpicker_lib_color_picker_service__["a" /* ColorPickerService */],
                 __WEBPACK_IMPORTED_MODULE_30__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
-                __WEBPACK_IMPORTED_MODULE_31__providers_demoprovider_demoprovider__["a" /* DemoproviderProvider */], __WEBPACK_IMPORTED_MODULE_32__providers_native_service_native_service__["a" /* NativeServiceProvider */]
+                __WEBPACK_IMPORTED_MODULE_31__providers_demoprovider_demoprovider__["a" /* DemoproviderProvider */], __WEBPACK_IMPORTED_MODULE_32__providers_native_service_native_service__["a" /* NativeServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_42__ionic_native_streaming_media__["a" /* StreamingMedia */]
             ]
         })
     ], AppModule);
@@ -2831,7 +2838,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 265:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2896,7 +2903,7 @@ var Host = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 266:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2941,7 +2948,7 @@ var ListFilter = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 267:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2978,7 +2985,7 @@ var Filter = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 268:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3023,14 +3030,14 @@ var MyStyleWidthDirective = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_login_login__ = __webpack_require__(107);
@@ -3127,7 +3134,7 @@ var MyApp = /** @class */ (function () {
                     console.log("用户用户");
                     mainThis.ls.setUser(data.data); //保存本地用户
                     mainThis.userInfo = data.data;
-                    mainThis.updateAvator();
+                    //mainThis.updateAvator();
                     if (isNaN(mainThis.ls.getFamilyId()) || mainThis.ls.getFamilyId() == null || mainThis.ls.getFamilyId() == 0)
                         mainThis.ls.setFamilyId(data.data.last_family_id);
                     //cordova.plugins.VolumeControl.setVolume(0.5);
@@ -3198,6 +3205,12 @@ var MyApp = /** @class */ (function () {
                                     console.log(wakeMsg);
                                     __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "openHomeMenu");
                                 }
+                                else if (res.type === "ttsStoped") {
+                                    if (res.message === "wakeup") {
+                                        this.openedMenu();
+                                        this.AIUIBegin();
+                                    }
+                                }
                                 else if (res.type === "nlp") {
                                     var nlpWord_1 = res.message;
                                     console.log(nlpWord_1);
@@ -3223,7 +3236,7 @@ var MyApp = /** @class */ (function () {
                                 }
                             });
                             //aiuiPlugin.wakeup();
-                            // aiuiPlugin.registerNotify(function (res) {
+                            // aiuiPlugin.registerNotify(function (res) { 
                             //     if (res.type === "wakeup") {
                             //         let wakeMsg = JSON.parse(res.message);
                             //         console.log(wakeMsg);
@@ -3550,10 +3563,29 @@ var MyApp = /** @class */ (function () {
         this.channelService.sub("PadAction").subscribe(function (data) {
             if (data.data.tts != undefined) {
                 zhijiaPlugin.ttsStop();
-                zhijiaPlugin.ttsPlay(data.data.tts.content);
+                zhijiaPlugin.ttsPlay(data.data.tts.content, "normal");
+            }
+            else if (data.data.play != undefined) {
+                switch (data.data.play.category) {
+                    case "news":
+                        break;
+                    case "voice"://开启识别
+                        {
+                            var wakewords = data.data.play.ext_param.split(',');
+                            var wakeword = wakewords[Math.floor(Math.random() * (wakewords.length + 1))];
+                            zhijiaPlugin.ttsPlay(wakeword, "wakeup");
+                            break;
+                        }
+                    case "music":
+                        break;
+                    default:
+                        break;
+                }
             }
         });
         this.channelService.sub("PadViewUpdate").subscribe(function (data) {
+            console.log("更新面板信息");
+            console.log(data);
             __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("updatefamily", null); //切换显示模式发送修改事件 
         });
         //情景触发
@@ -3668,7 +3700,7 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.playShortTTS = function (content) {
         //this.CurrentTTSIndex = 0;
         if (this.ls.getPlayTTS()) {
-            zhijiaPlugin.ttsPlay(content + "");
+            zhijiaPlugin.ttsPlay(content + "", "normal");
         }
     };
     //重置队列
@@ -4139,7 +4171,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 295:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4175,7 +4207,7 @@ var AutoFitLayout = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 296:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4289,7 +4321,7 @@ var AutojobProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 297:
+/***/ 298:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4354,7 +4386,7 @@ var DelayProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 298:
+/***/ 299:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4422,7 +4454,7 @@ var DoorlockProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 299:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4492,7 +4524,7 @@ var IntelligentProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 300:
+/***/ 301:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4546,7 +4578,7 @@ var LogProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4610,7 +4642,7 @@ var RoomProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 302:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5420,5 +5452,5 @@ var CONFIGURATION = {
 
 /***/ })
 
-},[221]);
+},[222]);
 //# sourceMappingURL=main.js.map

@@ -4,7 +4,7 @@
   package="com.zhijiaiot.app"
   android:hardwareAccelerated="true"
   android:versionCode="10016"
-  android:versionName="1.0.652">
+  android:versionName="1.0.658">
 
   <uses-sdk
     android:minSdkVersion="16"
@@ -27,6 +27,11 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
   <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
   <application
     android:hardwareAccelerated="true"
@@ -88,6 +93,14 @@
     <activity
       android:name=".TestActivity"
       android:label="@string/title_activity_test" />
+    <activity
+      android:name="com.lechange.zhijiaiot.app.mediaplay.MediaPlayActivity"
+      android:clearTaskOnLaunch="true"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:exported="false"
+      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+      android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity android:name=".SimpleVideoStream"></activity>
   </application>
 
 </manifest>

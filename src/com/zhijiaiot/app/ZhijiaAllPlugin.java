@@ -228,11 +228,14 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
       @Override
       public void onSpeechFinish(String s) {
         Log.i(TAG, "onSpeechFinish: "+s);
+
+        sendEvent("ttsStoped",s);
+
         //beginDuerLisning();
-        if("xz".equals(s)){
-          String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"100\"}";
-          asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
-        }
+//        if("xz".equals(s)){
+//          String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"100\"}";
+//          asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
+//        }
       }
       @Override
       public void onError(String s, SpeechError speechError) {
@@ -295,7 +298,8 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
       }
       else if("ttsPlay".equals(action)){
         String text = arg_object.getString("text");
-        mSpeechSynthesizer.speak(text);
+        String utteranceId = arg_object.getString("utteranceId");
+        mSpeechSynthesizer.speak(text,utteranceId);
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.OK) );
       }else if("ttsStop".equals(action)){
         mSpeechSynthesizer.stop();

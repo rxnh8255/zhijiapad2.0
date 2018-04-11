@@ -33146,7 +33146,7 @@ span.item-9 {
 }
 
 .ipad-scene {
-  margin: 30px auto 20px auto;
+  margin: 20px auto 10px auto;
 }
 
 .ipad-scene li {
@@ -33263,8 +33263,9 @@ span.item-9 {
 }
 
 .ipad-switch-content {
-  margin: 30px auto;
+  margin: 10px auto;
   width: 100%;
+  padding: 0 40px;
 }
 
 .ipad-switch {
@@ -33325,6 +33326,21 @@ span.item-9 {
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   border: none;
+}
+
+.ipad-switch .ipad-button-socket {
+  width: 90px;
+  height: 90px;
+  background: url("../assets/img/ipad_button_socket_off_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  border: none;
+}
+
+.ipad-switch .ipad-button-socket.active {
+  background: url("../assets/img/ipad_button_socket_on_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
 }
 
 .ipad-switch button.activated {
@@ -33660,162 +33676,213 @@ span.item-9 {
   margin: -55px auto 0 -55px;
 }
 
+.dialog-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 998;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dialog-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 997;
+  width: 100%;
+}
+
+.dialog-btn-opr {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -60px auto auto -100px;
+  z-index: 1001;
+}
+
+.dialog-btn-link {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFF;
+}
+
 /*�ڰ�ɫ��ʽ*/
-#hotel_59, #whitetechnology {
+#blacktechnology, #whitetechnology {
   background: no-repeat center;
-  background-image: url("../assets/img/hotel/59/ipad_bg.jpg");
+  background-image: url("../assets/img/hotel/blacktechnology/ipad_bg.jpg");
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
 }
 
-#hotel_59 .ipad-logo, #whitetechnology .ipad-logo {
+#blacktechnology .ipad-logo, #whitetechnology .ipad-logo {
   background-repeat: no-repeat;
-  background-image: url("../assets/img/hotel/59/logo.png");
+  background-image: url("../assets/img/hotel/blacktechnology/logo.png");
   background-size: auto 100%;
   -webkit-background-size: auto 100%;
 }
 
-#hotel_59 .ipad-top .weather-num span sub, #whitetechnology .ipad-top .weather-num span sub, #hotel_59 .ipad-top .home-weather-num span sub, #whitetechnology .ipad-top .home-weather-num span sub, #hotel_59 .ipad-top .home-weather-num span sub, #whitetechnology .ipad-top .home-weather-num span sub {
+#blacktechnology .ipad-top .weather-num span sub, #whitetechnology .ipad-top .weather-num span sub, #blacktechnology .ipad-top .home-weather-num span sub, #whitetechnology .ipad-top .home-weather-num span sub, #blacktechnology .ipad-top .home-weather-num span sub, #whitetechnology .ipad-top .home-weather-num span sub {
   color: #35383d;
 }
 
-#hotel_59 .ipad-top .weather-content span ion-icon, #whitetechnology .ipad-top .weather-content span ion-icon {
+#blacktechnology .ipad-top .weather-content span ion-icon, #whitetechnology .ipad-top .weather-content span ion-icon {
   color: #35383d;
 }
 
-#hotel_59 .ipad-top .weather-content h2, #whitetechnology .ipad-top .weather-content h2 {
+#blacktechnology .ipad-top .weather-content h2, #whitetechnology .ipad-top .weather-content h2 {
   color: #35383d;
 }
 
-#hotel_59 .ipad-top .weather-content h2 b, #whitetechnology .ipad-top .weather-content h2 b {
+#blacktechnology .ipad-top .weather-content h2 b, #whitetechnology .ipad-top .weather-content h2 b {
   color: #35383d;
 }
 
-#hotel_59 .ipad-top .home-weather-num, #whitetechnology .ipad-top .home-weather-num {
+#blacktechnology .ipad-top .home-weather-num, #whitetechnology .ipad-top .home-weather-num {
   color: #35383d;
   padding-top: 0;
 }
 
-#hotel_59 .ipad-top .weather-num b, #whitetechnology .ipad-top .weather-num b, #hotel_59 .ipad-top .home-weather-num b, #whitetechnology .ipad-top .home-weather-num b, #hotel_59 .ipad-top .home-weather-num b, #whitetechnology .ipad-top .home-weather-num b {
+#blacktechnology .ipad-top .weather-num b, #whitetechnology .ipad-top .weather-num b, #blacktechnology .ipad-top .home-weather-num b, #whitetechnology .ipad-top .home-weather-num b, #blacktechnology .ipad-top .home-weather-num b, #whitetechnology .ipad-top .home-weather-num b {
   color: #35383d;
 }
 
-#hotel_59 .ipad-scene li .scene-icon, #whitetechnology .ipad-scene li .scene-icon {
+#blacktechnology .ipad-scene li .scene-icon, #whitetechnology .ipad-scene li .scene-icon {
   border: 3px solid #4a4f55;
 }
 
-#hotel_59 .ipad-scene li .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li .scene-icon ion-spinner circle {
+#blacktechnology .ipad-scene li .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li .scene-icon ion-spinner circle {
   stroke: #4a4f55;
 }
 
-#hotel_59 .ipad-scene li .scene-icon .iconfont, #whitetechnology .ipad-scene li .scene-icon .iconfont, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1-outline, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2-outline, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3-outline, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4-outline, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5-outline, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab1, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab2, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab3, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab4, #hotel_59 .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab5 {
+#blacktechnology .ipad-scene li .scene-icon .iconfont, #whitetechnology .ipad-scene li .scene-icon .iconfont, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab1-outline, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab2-outline, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab3-outline, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab4-outline, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-ios-tab-tab5-outline, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab1, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab2, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab3, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab4, #blacktechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li .scene-icon ion-icon.ion-md-tab-tab5 {
   color: #4a4f55;
 }
 
-#hotel_59 .ipad-scene li p, #whitetechnology .ipad-scene li p {
+#blacktechnology .ipad-scene li p, #whitetechnology .ipad-scene li p {
   color: #4a4f55;
 }
 
-#hotel_59 .ipad-scene li a, #whitetechnology .ipad-scene li a {
+#blacktechnology .ipad-scene li a, #whitetechnology .ipad-scene li a {
   display: block;
 }
 
-#hotel_59 .ipad-scene li a.activated .scene-icon, #whitetechnology .ipad-scene li a.activated .scene-icon, #hotel_59 .ipad-scene li a:focus .scene-icon, #whitetechnology .ipad-scene li a:focus .scene-icon {
+#blacktechnology .ipad-scene li a.activated .scene-icon, #whitetechnology .ipad-scene li a.activated .scene-icon, #blacktechnology .ipad-scene li a:focus .scene-icon, #whitetechnology .ipad-scene li a:focus .scene-icon {
   border: 3px solid #35383d;
   -webkit-box-shadow: 0 0 20px #959ba3;
   box-shadow: 0 0 20px #959ba3;
   background-color: #35383d;
 }
 
-#hotel_59 .ipad-scene li a.activated .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li a.activated .scene-icon ion-spinner circle, #hotel_59 .ipad-scene li a:focus .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li a:focus .scene-icon ion-spinner circle {
+#blacktechnology .ipad-scene li a.activated .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li a.activated .scene-icon ion-spinner circle, #blacktechnology .ipad-scene li a:focus .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li a:focus .scene-icon ion-spinner circle {
   stroke: white;
   stroke-width: 2px;
 }
 
-#hotel_59 .ipad-scene li a.activated .scene-icon .iconfont, #whitetechnology .ipad-scene li a.activated .scene-icon .iconfont, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1-outline, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2-outline, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3-outline, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4-outline, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5-outline, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab1, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab2, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab3, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab4, #hotel_59 .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab5, #hotel_59 .ipad-scene li a:focus .scene-icon .iconfont, #whitetechnology .ipad-scene li a:focus .scene-icon .iconfont, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1-outline, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2-outline, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3-outline, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4-outline, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5-outline, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab1, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab2, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab3, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab4, #hotel_59 .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab5 {
+#blacktechnology .ipad-scene li a.activated .scene-icon .iconfont, #whitetechnology .ipad-scene li a.activated .scene-icon .iconfont, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab1-outline, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab2-outline, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab3-outline, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab4-outline, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-ios-tab-tab5-outline, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab1, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab2, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab3, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab4, #blacktechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li a.activated .scene-icon ion-icon.ion-md-tab-tab5, #blacktechnology .ipad-scene li a:focus .scene-icon .iconfont, #whitetechnology .ipad-scene li a:focus .scene-icon .iconfont, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab1-outline, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab2-outline, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab3-outline, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab4-outline, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-ios-tab-tab5-outline, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab1, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab2, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab3, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab4, #blacktechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li a:focus .scene-icon ion-icon.ion-md-tab-tab5 {
   color: #FFF;
 }
 
-#hotel_59 .ipad-scene li.scene-active a, #whitetechnology .ipad-scene li.scene-active a {
+#blacktechnology .ipad-scene li.scene-active a, #whitetechnology .ipad-scene li.scene-active a {
   display: block;
 }
 
-#hotel_59 .ipad-scene li.scene-active a .scene-icon, #whitetechnology .ipad-scene li.scene-active a .scene-icon {
+#blacktechnology .ipad-scene li.scene-active a .scene-icon, #whitetechnology .ipad-scene li.scene-active a .scene-icon {
   border: 3px solid #35383d;
   -webkit-box-shadow: 0 0 20px #959ba3;
   box-shadow: 0 0 20px #959ba3;
   background-color: #35383d;
 }
 
-#hotel_59 .ipad-scene li.scene-active a .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-spinner circle {
+#blacktechnology .ipad-scene li.scene-active a .scene-icon ion-spinner circle, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-spinner circle {
   stroke: white;
   stroke-width: 2px;
 }
 
-#hotel_59 .ipad-scene li.scene-active a .scene-icon .iconfont, #whitetechnology .ipad-scene li.scene-active a .scene-icon .iconfont, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1-outline, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2-outline, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3-outline, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4-outline, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5-outline, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab1, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab2, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab3, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab4, #hotel_59 .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab5 {
+#blacktechnology .ipad-scene li.scene-active a .scene-icon .iconfont, #whitetechnology .ipad-scene li.scene-active a .scene-icon .iconfont, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab1-outline, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab2-outline, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab3-outline, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab4-outline, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5-outline, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-ios-tab-tab5-outline, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab1, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab1, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab2, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab2, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab3, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab3, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab4, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab4, #blacktechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab5, #whitetechnology .ipad-scene li.scene-active a .scene-icon ion-icon.ion-md-tab-tab5 {
   color: #FFF;
 }
 
-#hotel_59 .ipad-switch, #whitetechnology .ipad-switch {
+#blacktechnology .ipad-switch, #whitetechnology .ipad-switch {
   border: 3px solid #4a4f55;
 }
 
-#hotel_59 .ipad-switch ion-col, #whitetechnology .ipad-switch ion-col {
+#blacktechnology .ipad-switch ion-col, #whitetechnology .ipad-switch ion-col {
   padding: 0;
 }
 
-#hotel_59 .ipad-switch ion-col p, #whitetechnology .ipad-switch ion-col p {
+#blacktechnology .ipad-switch ion-col p, #whitetechnology .ipad-switch ion-col p {
   font-size: 12px;
   text-align: center;
   color: #4a4f55;
 }
 
-#hotel_59 .ipad-switch .ipad-button-switch, #whitetechnology .ipad-switch .ipad-button-switch {
+#blacktechnology .ipad-switch .ipad-button-switch, #whitetechnology .ipad-switch .ipad-button-switch {
   width: 70px;
   height: 70px;
-  background: url("../assets/img/hotel/59/ipad_button_switch_off_bg.png") no-repeat center;
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_switch_off_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   border: none;
   opacity: 1;
 }
 
-#hotel_59 .ipad-switch .ipad-button-switch.active, #whitetechnology .ipad-switch .ipad-button-switch.active {
-  background: url("../assets/img/hotel/59/ipad_button_switch_on_bg.png") no-repeat center;
+#blacktechnology .ipad-switch .ipad-button-switch.active, #whitetechnology .ipad-switch .ipad-button-switch.active {
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_switch_on_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
 }
 
-#hotel_59 .ipad-switch .ipad-button-curtain, #whitetechnology .ipad-switch .ipad-button-curtain {
+#blacktechnology .ipad-switch .ipad-button-curtain, #whitetechnology .ipad-switch .ipad-button-curtain {
   width: 70px;
   height: 70px;
-  background: url("../assets/img/hotel/59/ipad_button_curtain_off_bg.png") no-repeat center;
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_curtain_off_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   border: none;
 }
 
-#hotel_59 .ipad-switch .ipad-button-curtain.active, #whitetechnology .ipad-switch .ipad-button-curtain.active {
-  background: url("../assets/img/hotel/59/ipad_button_curtain_on_bg.png") no-repeat center;
+#blacktechnology .ipad-switch .ipad-button-curtain.active, #whitetechnology .ipad-switch .ipad-button-curtain.active {
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_curtain_on_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
 }
 
-#hotel_59 .ipad-switch .ipad-button-camera, #whitetechnology .ipad-switch .ipad-button-camera {
+#blacktechnology .ipad-switch .ipad-button-camera, #whitetechnology .ipad-switch .ipad-button-camera {
   width: 90px;
   height: 90px;
-  background: url("../assets/img/hotel/59/ipad_button_camera_bg.png") no-repeat center;
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_camera_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   border: none;
 }
 
-#hotel_59 .ipad-switch button.activated, #whitetechnology .ipad-switch button.activated {
+#blacktechnology .ipad-switch .ipad-button-socket, #whitetechnology .ipad-switch .ipad-button-socket {
+  width: 90px;
+  height: 90px;
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_socket_off_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  border: none;
+}
+
+#blacktechnology .ipad-switch .ipad-button-socket.active, #whitetechnology .ipad-switch .ipad-button-socket.active {
+  background: url("../assets/img/hotel/blacktechnology/ipad_button_socket_on_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+}
+
+#blacktechnology .ipad-switch button.activated, #whitetechnology .ipad-switch button.activated {
   background-color: transparent;
   border: none;
 }
 
-#hotel_59 .ipad-switch .ipad-switch-content shebei-info, #whitetechnology .ipad-switch .ipad-switch-content shebei-info {
+#blacktechnology .ipad-switch .ipad-switch-content shebei-info, #whitetechnology .ipad-switch .ipad-switch-content shebei-info {
   border: 3px solid #4a4f55;
   width: 210px;
   margin: 5px 15px;
@@ -33823,18 +33890,18 @@ span.item-9 {
   position: relative;
 }
 
-#hotel_59 .ipad-switch .ipad-switch-content shebei-info .ipad-switch, #whitetechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch {
+#blacktechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch, #whitetechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch {
   border: none;
   margin: 0;
   height: 100%;
   width: 100%;
 }
 
-#hotel_59 .ipad-switch .ipad-switch-content shebei-info .ipad-switch .ion-row-full, #whitetechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch .ion-row-full {
+#blacktechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch .ion-row-full, #whitetechnology .ipad-switch .ipad-switch-content shebei-info .ipad-switch .ion-row-full {
   height: 100%;
 }
 
-#hotel_59 .ipad-switch .range-W, #whitetechnology .ipad-switch .range-W {
+#blacktechnology .ipad-switch .range-W, #whitetechnology .ipad-switch .range-W {
   height: 10px;
   position: relative;
   background: -webkit-gradient(linear, right top, left top, from(#ffde00), to(#fff));
@@ -33842,7 +33909,7 @@ span.item-9 {
   margin: 16px 0;
 }
 
-#hotel_59 .ipad-switch .range-W span, #whitetechnology .ipad-switch .range-W span {
+#blacktechnology .ipad-switch .range-W span, #whitetechnology .ipad-switch .range-W span {
   position: absolute;
   top: -11px;
   width: 10px;
@@ -33852,83 +33919,83 @@ span.item-9 {
   border-right: 10px solid transparent;
 }
 
-#hotel_59 .ipad-switch .ion-row-full, #whitetechnology .ipad-switch .ion-row-full {
+#blacktechnology .ipad-switch .ion-row-full, #whitetechnology .ipad-switch .ion-row-full {
   height: 100%;
 }
 
-#hotel_59 .ipad-switch .ion-range-row, #whitetechnology .ipad-switch .ion-range-row {
+#blacktechnology .ipad-switch .ion-range-row, #whitetechnology .ipad-switch .ion-range-row {
   font-size: .7rem;
   color: #4a4f55;
 }
 
-#hotel_59 .ipad-switch .ion-range-row .ion-range-label, #whitetechnology .ipad-switch .ion-range-row .ion-range-label {
+#blacktechnology .ipad-switch .ion-range-row .ion-range-label, #whitetechnology .ipad-switch .ion-range-row .ion-range-label {
   padding: 0;
 }
 
-#hotel_59 .ipad-switch .ion-range-row .ion-range-control ion-range, #whitetechnology .ipad-switch .ion-range-row .ion-range-control ion-range {
+#blacktechnology .ipad-switch .ion-range-row .ion-range-control ion-range, #whitetechnology .ipad-switch .ion-range-row .ion-range-control ion-range {
   padding-right: 0;
 }
 
-#hotel_59 .ipad-switch-content shebei-info, #whitetechnology .ipad-switch-content shebei-info {
+#blacktechnology .ipad-switch-content shebei-info, #whitetechnology .ipad-switch-content shebei-info {
   border: 3px solid #4a4f55;
 }
 
-#hotel_59 .ipad-switch-content shebei-info .ipad-switch, #whitetechnology .ipad-switch-content shebei-info .ipad-switch {
+#blacktechnology .ipad-switch-content shebei-info .ipad-switch, #whitetechnology .ipad-switch-content shebei-info .ipad-switch {
   border: none;
 }
 
-#hotel_59 .ipad-icon-switch, #whitetechnology .ipad-icon-switch {
+#blacktechnology .ipad-icon-switch, #whitetechnology .ipad-icon-switch {
   color: #4a4f55;
 }
 
-#hotel_59 .ipad-switch-tit span, #whitetechnology .ipad-switch-tit span {
+#blacktechnology .ipad-switch-tit span, #whitetechnology .ipad-switch-tit span {
   background-color: #FFF;
   border: 3px solid #4a4f55;
   color: #4a4f55;
 }
 
-#hotel_59 .color-rgbw span, #whitetechnology .color-rgbw span, #hotel_59 .color-temperature span, #whitetechnology .color-temperature span, #hotel_59 .colorpicker-hue span, #whitetechnology .colorpicker-hue span, #hotel_59 .color-temperature span, #whitetechnology .color-temperature span, #hotel_59 .color-rgbw span, #whitetechnology .color-rgbw span {
+#blacktechnology .color-rgbw span, #whitetechnology .color-rgbw span, #blacktechnology .color-temperature span, #whitetechnology .color-temperature span, #blacktechnology .colorpicker-hue span, #whitetechnology .colorpicker-hue span, #blacktechnology .color-temperature span, #whitetechnology .color-temperature span, #blacktechnology .color-rgbw span, #whitetechnology .color-rgbw span {
   border-top: 10px solid #4a4f55;
 }
 
-#hotel_59 .color-temperature, #whitetechnology .color-temperature {
+#blacktechnology .color-temperature, #whitetechnology .color-temperature {
   border: 1px solid #DDD;
 }
 
-#hotel_59 .code-content .code-tit-tip, #whitetechnology .code-content .code-tit-tip {
-  background: url("../assets/img/hotel/59/wx_code_tip.png") no-repeat center;
+#blacktechnology .code-content .code-tit-tip, #whitetechnology .code-content .code-tit-tip {
+  background: url("../assets/img/hotel/blacktechnology/wx_code_tip.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
 }
 
-#hotel_59 .code-content .code-tit, #whitetechnology .code-content .code-tit {
+#blacktechnology .code-content .code-tit, #whitetechnology .code-content .code-tit {
   color: #35383d;
 }
 
-#hotel_59 .code-content .wx-code, #whitetechnology .code-content .wx-code {
-  background: url("../assets/img/hotel/59/wx_code.png") no-repeat center;
+#blacktechnology .code-content .wx-code, #whitetechnology .code-content .wx-code {
+  background: url("../assets/img/hotel/blacktechnology/wx_code.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
 }
 
-#hotel_59 .MP3-control .MP3-control-item, #whitetechnology .MP3-control .MP3-control-item {
+#blacktechnology .MP3-control .MP3-control-item, #whitetechnology .MP3-control .MP3-control-item {
   border: 2px solid #4a4f55;
 }
 
-#hotel_59 .MP3-control .MP3-control-item button, #whitetechnology .MP3-control .MP3-control-item button {
+#blacktechnology .MP3-control .MP3-control-item button, #whitetechnology .MP3-control .MP3-control-item button {
   color: #4a4f55;
 }
 
-#hotel_59 .MP3-control .MP3-control-item button ion-icon, #whitetechnology .MP3-control .MP3-control-item button ion-icon {
+#blacktechnology .MP3-control .MP3-control-item button ion-icon, #whitetechnology .MP3-control .MP3-control-item button ion-icon {
   padding-right: 5px;
 }
 
-#hotel_59 .MP3-control .MP3-control-item p, #whitetechnology .MP3-control .MP3-control-item p {
+#blacktechnology .MP3-control .MP3-control-item p, #whitetechnology .MP3-control .MP3-control-item p {
   font-size: 1.4rem;
   text-align: center;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(1), #whitetechnology .MP3-control .MP3-control-item:nth-child(1) {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(1), #whitetechnology .MP3-control .MP3-control-item:nth-child(1) {
   left: 0;
   top: 5px;
   z-index: 2;
@@ -33937,11 +34004,11 @@ span.item-9 {
   text-align: center;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(1) p, #whitetechnology .MP3-control .MP3-control-item:nth-child(1) p {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(1) p, #whitetechnology .MP3-control .MP3-control-item:nth-child(1) p {
   margin-top: 10px;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(2), #whitetechnology .MP3-control .MP3-control-item:nth-child(2) {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(2), #whitetechnology .MP3-control .MP3-control-item:nth-child(2) {
   width: 50px;
   height: 50px;
   border-radius: 100px;
@@ -33951,18 +34018,18 @@ span.item-9 {
   top: 0;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(2) button, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) button {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(2) button, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) button {
   height: 50px;
   width: 50px;
   text-align: center;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(2) button ion-icon, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) button ion-icon {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(2) button ion-icon, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) button ion-icon {
   padding-right: 0;
   padding-bottom: 5px;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(2) .button-inner, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .button-inner, #hotel_59 .MP3-control .MP3-control-item:nth-child(2) .equipment-home-grid .equipment-home-item, .equipment-home-grid #hotel_59 .MP3-control .MP3-control-item:nth-child(2) .equipment-home-item, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-grid .equipment-home-item, .equipment-home-grid #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-item {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(2) .button-inner, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .button-inner, #blacktechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-grid .equipment-home-item, .equipment-home-grid #blacktechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-item, #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-grid .equipment-home-item, .equipment-home-grid #whitetechnology .MP3-control .MP3-control-item:nth-child(2) .equipment-home-item {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -33970,7 +34037,7 @@ span.item-9 {
   flex-direction: column;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(3), #whitetechnology .MP3-control .MP3-control-item:nth-child(3) {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(3), #whitetechnology .MP3-control .MP3-control-item:nth-child(3) {
   right: 0;
   top: 5px;
   z-index: 2;
@@ -33979,31 +34046,31 @@ span.item-9 {
   border-radius: 0 50px 50px 0;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(3) button, #whitetechnology .MP3-control .MP3-control-item:nth-child(3) button {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(3) button, #whitetechnology .MP3-control .MP3-control-item:nth-child(3) button {
   margin-left: 14px;
 }
 
-#hotel_59 .MP3-control .MP3-control-item:nth-child(3) p, #whitetechnology .MP3-control .MP3-control-item:nth-child(3) p {
+#blacktechnology .MP3-control .MP3-control-item:nth-child(3) p, #whitetechnology .MP3-control .MP3-control-item:nth-child(3) p {
   margin-top: 10px;
 }
 
-#hotel_59 .ion-toggle-play .item, #whitetechnology .ion-toggle-play .item {
+#blacktechnology .ion-toggle-play .item, #whitetechnology .ion-toggle-play .item {
   color: #4a4f55;
 }
 
-#hotel_59 .ion-toggle-play .toggle.toggle-checked .toggle-icon, #whitetechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon {
+#blacktechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon, #whitetechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon {
   background-color: #4a4f55;
 }
 
-#hotel_59 .ion-toggle-play .toggle.toggle-checked .toggle-icon .toggle-inner, #whitetechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon .toggle-inner {
+#blacktechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon .toggle-inner, #whitetechnology .ion-toggle-play .toggle.toggle-checked .toggle-icon .toggle-inner {
   background-color: #35383d;
 }
 
-#hotel_59 .MP3-wrap .ion-range-control ion-icon, #whitetechnology .MP3-wrap .ion-range-control ion-icon {
+#blacktechnology .MP3-wrap .ion-range-control ion-icon, #whitetechnology .MP3-wrap .ion-range-control ion-icon {
   color: #4a4f55;
 }
 
-#hotel_59 .MIC-orange .dot, #whitetechnology .MIC-orange .dot {
+#blacktechnology .MIC-orange .dot, #whitetechnology .MIC-orange .dot {
   border: 1px solid #1b86ca;
   background-color: #1b86ca;
   width: 70px;
@@ -34013,7 +34080,7 @@ span.item-9 {
   margin: -35px auto 0 -35px;
 }
 
-#hotel_59 .MIC-orange .pulse, #whitetechnology .MIC-orange .pulse {
+#blacktechnology .MIC-orange .pulse, #whitetechnology .MIC-orange .pulse {
   border: 1px solid #1b86ca;
   -webkit-box-shadow: 1px 1px 30px #1b86ca;
   box-shadow: 1px 1px 30px #1b86ca;
@@ -34023,7 +34090,7 @@ span.item-9 {
   margin: -55px auto 0 -55px;
 }
 
-#hotel_59 .MIC-orange .pulse1, #whitetechnology .MIC-orange .pulse1 {
+#blacktechnology .MIC-orange .pulse1, #whitetechnology .MIC-orange .pulse1 {
   border: 1px solid #1b86ca;
   -webkit-box-shadow: 1px 1px 30px #1b86ca;
   box-shadow: 1px 1px 30px #1b86ca;
@@ -34043,7 +34110,7 @@ span.item-9 {
 }
 
 #whitetechnology .ipad-scene {
-  /*margin: 10px auto 10px auto;*/
+  margin: 20px auto 20px auto;
 }
 
 #whitetechnology .ipad-scene li {
@@ -34114,7 +34181,7 @@ span.item-9 {
 #whitetechnology .ipad-switch .ipad-button-sleep {
   width: 90px;
   height: 90px;
-  background: url("../assets/img/hotel/43/ipad_button_sleep_bg.png") no-repeat center;
+  background: url("../assets/img/hotel/whitetechnology/ipad_button_sleep_bg.png") no-repeat center;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   border: none;

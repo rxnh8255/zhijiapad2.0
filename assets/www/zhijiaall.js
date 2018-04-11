@@ -11,8 +11,8 @@ ZhijiaPlugin.prototype.start = function(success, fail) {
 ZhijiaPlugin.prototype.stop = function(success, fail) {
 	return cordova.exec(success, fail, "ZhijiaAllPlugin", "stop", [{}]);
 };
-ZhijiaPlugin.prototype.ttsPlay = function(message,success, fail) {
-	return cordova.exec(success, fail, "ZhijiaAllPlugin", "ttsPlay", [{text:message}]);
+ZhijiaPlugin.prototype.ttsPlay = function(message,utteranceId,success, fail) {
+	return cordova.exec(success, fail, "ZhijiaAllPlugin", "ttsPlay", [{text:message,utteranceId:utteranceId}]);
 };
 ZhijiaPlugin.prototype.ttsStop = function(success, fail) {
 	return cordova.exec(success, fail, "ZhijiaAllPlugin", "ttsStop", [{}]);

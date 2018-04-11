@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(320);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,7 +47,7 @@ var HomePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 312:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2284,14 +2284,14 @@ var TVBaoFengBoadMap = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 313:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ColorPickerComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__color_picker_directive__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__color_picker_directive__ = __webpack_require__(315);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2328,7 +2328,7 @@ var ColorPickerComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 314:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2499,7 +2499,7 @@ var ColorPickerDirective = /** @class */ (function () {
     };
     ColorPickerDirective.prototype.setColorFromString = function (value, emit) {
         if (emit === void 0) { emit = true; }
-        console.log("setColorFromString");
+        //console.log("setColorFromString");
         var hsva;
         if (this.cpAlphaChannel === 'hex8') {
             hsva = this.service.stringToHsva(value, true);
@@ -3203,7 +3203,7 @@ var SliderDirective = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 315:
+/***/ 316:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3211,7 +3211,7 @@ var SliderDirective = /** @class */ (function () {
 /* unused harmony export outlet_status */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3443,7 +3443,7 @@ var ExtendedOutlet = /** @class */ (function () {
             }
             if (this.ls.getPlayTTS()) {
                 var text = "正在为您" + ((status === 1) ? "打开" : "关闭") + deviceinfo.device_subinfo.items[index] + "中。";
-                zhijiaPlugin.ttsPlay(text);
+                zhijiaPlugin.ttsPlay(text, "normal");
             }
             //获取当前第一个按钮的状态 0关， 1开,2不控制
             this.eq.Send(deviceinfo.device_id, sendOpType).subscribe(function (data) {
@@ -3464,7 +3464,7 @@ var ExtendedOutlet = /** @class */ (function () {
             }
             if (this.ls.getPlayTTS()) {
                 var text = "正在为您" + ((status === 1) ? "打开" : "关闭") + deviceinfo.device_subinfo.items[index] + "中。";
-                zhijiaPlugin.ttsPlay(text);
+                zhijiaPlugin.ttsPlay(text, "normal");
             }
             //获取当前第一个按钮的状态 0关， 1开,2不控制
             this.eq.Send(deviceinfo.device_id, sendOpType).subscribe(function (data) {
@@ -3527,7 +3527,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 316:
+/***/ 317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3535,9 +3535,9 @@ var outlet_status = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OutletModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return outlet_status; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(44);
@@ -4425,7 +4425,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 318:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4441,6 +4441,7 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_usercenter_usercenter__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(219);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4462,12 +4463,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, _sanitizer, nav, menu, ls, loginService, ext, sceneService, alertCtrl, popoverCtrl, channelService, eq, userCenterService, ref) {
+    function HomePage(navCtrl, _sanitizer, nav, menu, streamingMedia, ls, loginService, ext, sceneService, alertCtrl, popoverCtrl, channelService, eq, userCenterService, ref) {
         this.navCtrl = navCtrl;
         this._sanitizer = _sanitizer;
         this.nav = nav;
         this.menu = menu;
+        this.streamingMedia = streamingMedia;
         this.ls = ls;
         this.loginService = loginService;
         this.ext = ext;
@@ -4479,7 +4482,7 @@ var HomePage = /** @class */ (function () {
         this.userCenterService = userCenterService;
         this.ref = ref;
         //房间信息
-        this.RoomList = [];
+        //RoomList: Array<any> = [];
         this.hotelId = 1;
         this.FamilyId = 0;
         this.hotelBg = this._sanitizer.bypassSecurityTrustStyle("url(" + "assets/img/ipad_bg.jpg" + ")");
@@ -4501,7 +4504,6 @@ var HomePage = /** @class */ (function () {
         this.t = Math.random();
         this.light = 0;
         this.sceneList = [];
-        this.isadddevice = true;
         this.isadministrator = false; //是否管理员用户
         this.weather = null; //实时天气
         this.weatherico = "iconfont icon-tianqi";
@@ -4513,6 +4515,28 @@ var HomePage = /** @class */ (function () {
         this.GetUserBasicInformation(true); //加载基本数据 
         this.dealS(); //检查是否为二维码添加设备
     }
+    HomePage.prototype.setvideoTimeOut = function () {
+        var _this = this;
+        clearTimeout(this.videoTimeout);
+        var homeThis = this;
+        this.videoTimeout = setTimeout(function () {
+            var options = {
+                successCallback: function () {
+                    console.log("体验开始");
+                    homeThis.sceneService.ExcuteScene("体验", _this.ls.getFamilyId()).subscribe(function (result) {
+                        console.log(result);
+                    });
+                    homeThis.setvideoTimeOut();
+                },
+                errorCallback: function (e) {
+                    console.log("体验结束错误erer" + e);
+                    homeThis.setvideoTimeOut();
+                },
+                orientation: 'landscape'
+            };
+            _this.streamingMedia.playVideo('/s', options);
+        }, 120000);
+    };
     //20170215
     //家房间设备所有信息  //家与房间的变化要更新
     HomePage.prototype.GetUserBasicInformation = function (isload) {
@@ -4578,7 +4602,7 @@ var HomePage = /** @class */ (function () {
         var _this = this;
         var userBasicInfo = this.ls.getUserBasicInformation();
         this.ls.setFamilyList(userBasicInfo);
-        this.RoomList = [];
+        //this.RoomList = [];
         if (userBasicInfo && userBasicInfo.length > 0) {
             for (var _i = 0, userBasicInfo_1 = userBasicInfo; _i < userBasicInfo_1.length; _i++) {
                 var family = userBasicInfo_1[_i];
@@ -4607,65 +4631,36 @@ var HomePage = /** @class */ (function () {
                     if (family.padInfo.device_pad.theme != undefined) {
                         this.hotelStyle = family.padInfo.device_pad.theme;
                     }
+                    if (family.padInfo.device_pad.enable_qr != undefined && family.padInfo.device_pad.enable_qr) {
+                        this.GetShareInfo();
+                    }
                     this.ls.setFamilyName(family.name);
                     this.ls.setRoomUserName(family.username);
                     this.isadministrator = this.ls.isUserAdministrator();
                     this.DeviceList = [];
-                    // this.AgList = [];
                     this.FlatDeviceList = [];
                     this.eq.PadGetDevice(familyId).subscribe(function (result) {
                         _this.FlatDeviceList = result.data;
                     });
                     break;
-                    //  for (let fa of family.roomlist)
-                    //  if (fa.devices != null && fa.devices != "" && fa.devices.length > 0) {
-                    // for (let dev of fa.devices) {
-                    //   dev.roomName = fa.name;
-                    //   this.FlatDeviceList.push(dev);
-                    // if (dev.product_id === DeviceConst.Airradio_A2 || dev.product_id === DeviceConst.Airradio_A2se
-                    //   || dev.product_id === DeviceConst.Airradio_A1
-                    // ) {
-                    //   //添加到首页滚动页面
-                    //   if (dev.latest_staus === null || dev.latest_staus.isOnline === 0) { //空气电台没有最后一次数据的 去掉用一次
-                    //     this.ext.FindAirStationDate(dev.device_id).subscribe(result => {
-                    //       if (result.error_code === 0) {
-                    //         this.AgList.push(result.data);
-                    //         dev = result.data;
-                    //       }
-                    //     }, error => {
-                    //     });
-                    //   } else this.AgList.push(dev);
-                    // }
-                    // }
-                    // this.DeviceList.push(fa);
-                    // }
-                    //  this.DeviceList = family.roomlist;
-                    // for (let room of family.roomlist) {
-                    //   if (room.devices != null && room.devices != "" && room.devices.length > 0)
-                    //     this.RoomList.push({ name: room.name, room_id: room.room_id, devices: "12" });
-                    //   else
-                    //     this.RoomList.push({ name: room.name, room_id: room.room_id, devices: "" });
-                    // }
                 }
             }
         }
-        this.isadddevice = (this.DeviceList.length < 1);
-        this.ls.setRoomList(this.RoomList);
-        this.GetFindRooms();
-        this.GetShareInfo();
+        //this.ls.setRoomList(this.RoomList);
+        //this.GetFindRooms();
+        //this.GetShareInfo();
         this.ref.detectChanges();
     };
     //当前的房间信息
-    HomePage.prototype.GetFindRooms = function () {
-        var _this = this;
-        this.FamilyName = this.ls.getFamilyName();
-        this.sceneService.FindIndexListDate(0).subscribe(function (result) {
-        });
-        setTimeout(function () {
-            _this.sceneService.FindIndexListDate(0).subscribe(function (result) {
-            });
-        }, 4000);
-    };
+    //GetFindRooms() {
+    // this.FamilyName = this.ls.getFamilyName();
+    // this.sceneService.FindIndexListDate(0).subscribe(result => {
+    // });
+    // setTimeout(() => {
+    //   this.sceneService.FindIndexListDate(0).subscribe(result => {
+    //   });
+    // }, 4000);
+    //}
     //下拉刷新
     HomePage.prototype.pullrefresh = function (event) {
         this.GetUserBasicInformation(true);
@@ -4714,6 +4709,7 @@ var HomePage = /** @class */ (function () {
         //Emitter.fire("playPrevious", null);
     };
     HomePage.prototype.OpenMenu = function () {
+        this.setvideoTimeOut();
         this.menu.open();
         __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__["a" /* Emitter */].fire("openMenu", null);
     };
@@ -4727,6 +4723,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.ImplementScene = function (scene) {
         var _this = this;
+        this.setvideoTimeOut();
         this.showRun(scene);
         if (scene.is_anfang) {
             var popover = this.popoverCtrl.create("selectanfang", {
@@ -4855,6 +4852,7 @@ var HomePage = /** @class */ (function () {
     //页面加载时运行。此事件仅在每个页面创建时发生一次。如果页面离开但已被缓存，则此事件将不会在后续查看时再次触发。该ionViewDidLoad事件是放置页面的设置代码的好地方。
     HomePage.prototype.ionViewDidLoad = function () {
         var _this = this;
+        this.setvideoTimeOut();
         this.PlaySceneState = this.ls.getPlayScene();
         this.PlayTTSState = this.ls.getPlayTTS();
         __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__["a" /* Emitter */].register("musicState", this.UpdateMusicState, this); //homne上的按键响应
@@ -4925,6 +4923,7 @@ var HomePage = /** @class */ (function () {
                 //cordova.plugins.VolumeControl.setVolume(this.playVolume / 100);
                 break;
             case "openHomeMenu":
+                this.setvideoTimeOut();
                 this.menu.open();
                 break;
         }
@@ -4954,37 +4953,44 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.GetShareInfo = function () {
         var _this = this;
         var fxfamilyId = this.ls.getFamilyId();
-        this.userCenterService.GetFamily(fxfamilyId).subscribe(function (result) {
-            var family_type = result.data.family_type; // 0表示家庭，1表示酒店客房
-            var qr_username = result.data.qr_username;
-            _this.checked = false;
-            _this.src = null;
-            // var username = this.userCenterService.GetUserInfo().username;
-            _this.userCenterService.GetUserInfo().subscribe(function (result) {
-                var username = result.data.username;
-                if (username === qr_username) {
-                    var familyId = _this.ls.getFamilyId();
-                    if (family_type === 0) {
-                        _this.userCenterService.GetShareInfo(familyId.toString()).subscribe(function (resultData) {
-                            if (resultData.data.qr !== null) {
-                                _this.src = resultData.data.qr;
-                                _this.checked = true;
-                                _this.ref.detectChanges();
-                            }
-                        });
-                    }
-                    else if (family_type === 1) {
-                        _this.userCenterService.GetShareInfo(familyId.toString()).subscribe(function (resultData) {
-                            if (resultData.data.qr !== null) {
-                                _this.src = resultData.data.qr;
-                                _this.checked = true;
-                                _this.ref.detectChanges();
-                            }
-                        });
-                    }
-                }
-            });
+        this.userCenterService.GetShareInfo(fxfamilyId.toString()).subscribe(function (resultData) {
+            if (resultData.data.qr !== null) {
+                _this.src = resultData.data.qr;
+                _this.checked = true;
+                _this.ref.detectChanges();
+            }
         });
+        // this.userCenterService.GetFamily(fxfamilyId).subscribe(result => {
+        //   let family_type = result.data.family_type;// 0表示家庭，1表示酒店客房
+        //   let qr_username = result.data.qr_username;
+        //   this.checked = false;
+        //   this.src = null;
+        //   // var username = this.userCenterService.GetUserInfo().username;
+        //   this.userCenterService.GetUserInfo().subscribe(result => {
+        //     var username = result.data.username;
+        //     if (username === qr_username) {
+        //       let familyId = this.ls.getFamilyId();
+        //       if (family_type === 0) {
+        //         this.userCenterService.GetShareInfo(familyId.toString()).subscribe(resultData => {
+        //           if (resultData.data.qr !== null) {
+        //             this.src = resultData.data.qr;
+        //             this.checked = true;
+        //             this.ref.detectChanges();
+        //           }
+        //         });
+        //       }
+        //       else if (family_type === 1) {
+        //         this.userCenterService.GetShareInfo(familyId.toString()).subscribe(resultData => {
+        //           if (resultData.data.qr !== null) {
+        //             this.src = resultData.data.qr;
+        //             this.checked = true;
+        //             this.ref.detectChanges();
+        //           }
+        //         });
+        //       }
+        //     }
+        //   });
+        // });
         // if (result.data.sharedState === 1) {
         //   this.userCenterService.GetShareInfo().subscribe(result => {
         //     if (result.data.qr !== null) {
@@ -5023,6 +5029,7 @@ var HomePage = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__["a" /* StreamingMedia */],
             __WEBPACK_IMPORTED_MODULE_2__providers_localdata_localdata__["a" /* LocaldataProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_login_login__["a" /* LoginProvider */],
             __WEBPACK_IMPORTED_MODULE_5__providers_externalinterface_externalinterface__["a" /* ExternalinterfaceProvider */],
@@ -5041,20 +5048,20 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 319:
+/***/ 320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShebeiComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(336);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5099,13 +5106,13 @@ var ShebeiComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 320:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShebeiComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__ = __webpack_require__(313);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5264,15 +5271,15 @@ var ShebeiComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 321:
+/***/ 322:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WifideviceComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(324);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5308,7 +5315,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5316,7 +5323,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 /* unused harmony export outlet_status */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extended_extendedurlimg__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_channel_channel__ = __webpack_require__(106);
@@ -5669,7 +5676,7 @@ var WifideviceComponent = /** @class */ (function () {
     ], WifideviceComponent.prototype, "device", null);
     WifideviceComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'wifidevice-device',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app\app\src\components\wifidevice\wifidevice.html"*/'<div class="ipad-switch" *ngIf="devicetype===wificurtain">\n\n  <ion-row center>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain active" (click)="click1();"></button>\n\n        <p>关闭</p>\n\n      </ion-col>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain" (click)="click3();"></button>\n\n        <p>开启</p>\n\n      </ion-col>\n\n  </ion-row>\n\n  <ion-row class="ion-row-padding">\n\n    <ion-col col-6 text-left>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-6 text-right>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-12 >\n\n      <ion-range min="0" max="100" [(ngModel)]="brightness" (ionChange)="change($event)" pin="true" debounce="1000" class="ipad-range-small">\n\n      </ion-range>\n\n    </ion-col>\n\n    <ion-col col-12 text-center>\n\n      <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<!-- <div class="ipad-switch">\n\n    <ion-row center>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain"></button>\n\n            <p>开启</p>\n\n        </ion-col>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain active"></button>\n\n            <p>关闭</p>\n\n        </ion-col>\n\n    </ion-row>\n\n    <ion-row class="ion-row-padding">\n\n        <ion-col col-6 text-left>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-6 text-right>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n        </ion-col>\n\n        <ion-col>\n\n            <ion-range class="ipad-range-small" [(ngModel)]="brightness">\n\n            </ion-range>\n\n        </ion-col>\n\n        <ion-col col-12 text-center>\n\n            <p>客厅窗帘</p>\n\n        </ion-col>\n\n    </ion-row>\n\n</div> -->\n\n\n\n<!-- <ion-item  *ngIf="type===0">\n\n  <ion-avatar item-left (click)="pushPage()">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </ion-avatar>\n\n  <ion-label>\n\n    <h2 (click)="pushPage()">{{deviceinfo.name}}</h2>\n\n    <p (click)="pushPage()"> {{online}}</p>\n\n  </ion-label>\n\n  <div item-right *ngIf="devicetype===wifioutlet">\n\n    <ion-toggle [(ngModel)]="checked" [disabled]="stattype" mode="ios" color="secondary" (ngModelChange)="clickvalue()"></ion-toggle>\n\n  </div>\n\n  <div item-right *ngIf="devicetype===wificurtain">\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus3" (click)="click1();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus2" (click)="click2();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus1" (click)="click3();"></button-curtain-template>\n\n  </div>\n\n</ion-item>\n\n<div *ngIf="type===1" class="equipment-home-item" (click)="pushPage()">\n\n  <div class="equipment-thumbnail">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </div>\n\n  <h2>{{deviceinfo.name}}</h2>\n\n  <p>{{online}}</p>\n\n</div> -->'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app\app\src\components\wifidevice\wifidevice.html"*/
+            selector: 'wifidevice-device',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app\app\src\components\wifidevice\wifidevice.html"*/'<div class="ipad-switch" *ngIf="devicetype===wificurtain">\n\n  <ion-row center>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain active" (click)="click1();"></button>\n\n        <p>关闭</p>\n\n      </ion-col>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain" (click)="click3();"></button>\n\n        <p>开启</p>\n\n      </ion-col>\n\n  </ion-row>\n\n  <ion-row class="ion-row-padding">\n\n    <ion-col col-6 text-left>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-6 text-right>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-12 >\n\n      <ion-range min="0" max="100" [(ngModel)]="brightness" (ionChange)="change($event)" pin="true" debounce="1000" class="ipad-range-small">\n\n      </ion-range>\n\n    </ion-col>\n\n    <ion-col col-12 text-center>\n\n      <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<div class="ipad-switch" *ngIf="devicetype===wifioutlet">\n\n  <ion-row center class="ion-row-full align-items-center">\n\n    <ion-col text-center>\n\n        <button *ngIf="checked" color="bright" outline ion-button icon-only class="ipad-button-socket" (click)="clickvalue()"></button>\n\n        <button *ngIf="!checked" color="bright" outline ion-button icon-only class="ipad-button-socket active" (click)="clickvalue()"></button>\n\n        <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<!-- <div class="ipad-switch">\n\n    <ion-row center>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain"></button>\n\n            <p>开启</p>\n\n        </ion-col>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain active"></button>\n\n            <p>关闭</p>\n\n        </ion-col>\n\n    </ion-row>\n\n    <ion-row class="ion-row-padding">\n\n        <ion-col col-6 text-left>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-6 text-right>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n        </ion-col>\n\n        <ion-col>\n\n            <ion-range class="ipad-range-small" [(ngModel)]="brightness">\n\n            </ion-range>\n\n        </ion-col>\n\n        <ion-col col-12 text-center>\n\n            <p>客厅窗帘</p>\n\n        </ion-col>\n\n    </ion-row>\n\n</div> -->\n\n\n\n<!-- <ion-item  *ngIf="type===0">\n\n  <ion-avatar item-left (click)="pushPage()">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </ion-avatar>\n\n  <ion-label>\n\n    <h2 (click)="pushPage()">{{deviceinfo.name}}</h2>\n\n    <p (click)="pushPage()"> {{online}}</p>\n\n  </ion-label>\n\n  <div item-right *ngIf="devicetype===wifioutlet">\n\n    <ion-toggle [(ngModel)]="checked" [disabled]="stattype" mode="ios" color="secondary" (ngModelChange)="clickvalue()"></ion-toggle>\n\n  </div>\n\n  <div item-right *ngIf="devicetype===wificurtain">\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus3" (click)="click1();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus2" (click)="click2();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus1" (click)="click3();"></button-curtain-template>\n\n  </div>\n\n</ion-item>\n\n<div *ngIf="type===1" class="equipment-home-item" (click)="pushPage()">\n\n  <div class="equipment-thumbnail">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </div>\n\n  <h2>{{deviceinfo.name}}</h2>\n\n  <p>{{online}}</p>\n\n</div> -->'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app\app\src\components\wifidevice\wifidevice.html"*/
         })
         //wifi设备Component
         ,
@@ -5692,7 +5699,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 323:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5737,20 +5744,20 @@ var CurtainButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 324:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwitchComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__switch__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(315);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_module__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__switch__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_module__ = __webpack_require__(314);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5798,7 +5805,7 @@ var SwitchComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5848,7 +5855,7 @@ var SwitchrounddelayComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 326:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5906,16 +5913,16 @@ var SwitchButtonDetailed = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 327:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwitchdetailedaComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__switch__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__switch__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_channel_channel__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(315);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interfaces_deviceconst__ = __webpack_require__(313);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6058,7 +6065,7 @@ var SwitchdetailedaComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 328:
+/***/ 329:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6115,14 +6122,14 @@ var GradientComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 329:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoorlockComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(331);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6155,7 +6162,7 @@ var DoorlockComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 330:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6163,7 +6170,7 @@ var DoorlockComponentModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6272,14 +6279,14 @@ var DoorlockComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 331:
+/***/ 332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemonstrationComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(333);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6312,16 +6319,16 @@ var DemonstrationComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 332:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemonstrationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_demoprovider_demoprovider__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_demoprovider_demoprovider__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_channel_channel__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6643,14 +6650,14 @@ var DemonstrationComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 333:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AirdetectorComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(335);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6683,7 +6690,7 @@ var AirdetectorComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6807,14 +6814,14 @@ var AirdetectorComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 335:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemoncameraComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(337);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6847,13 +6854,13 @@ var DemoncameraComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 336:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemoncameraComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_lecheng_lecheng__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_lecheng_lecheng__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

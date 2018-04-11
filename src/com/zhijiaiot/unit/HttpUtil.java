@@ -2,11 +2,12 @@ package com.zhijiaiot.unit;
 
 import android.content.Context;
 
-import com.baidu.dcs.okhttp3.Callback;
-import com.baidu.dcs.okhttp3.MediaType;
-import com.baidu.dcs.okhttp3.OkHttpClient;
-import com.baidu.dcs.okhttp3.Request;
-import com.baidu.dcs.okhttp3.RequestBody;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+
 
 /**
  * Created by rxnh8 on 2018/3/27.
