@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 308:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(338);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(214);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 338:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121,58 +121,6 @@ var LoginPage = /** @class */ (function () {
             _this.lp.alert("提示", "服务器连接失败，请稍后再试。");
         });
         this.ref.detectChanges();
-    };
-    LoginPage.prototype.weixinlogin = function () {
-        var _this = this;
-        //微信登录
-        var self = this;
-        this.disable = true;
-        //检测是否安装了微信
-        Wechat.isInstalled(function (isInstall) {
-            if (isInstall) {
-                var scope = "snsapi_userinfo";
-                var state = "_" + (+new Date());
-                Wechat.auth(scope, state, function (success) {
-                    _this.disable = true;
-                    var code = success.code;
-                    var state = success.state;
-                    var country = success.country;
-                    self.loadingInit();
-                    self.loading.present().then(function () {
-                        self.loginp.WeiXinLogin(code, state, country).subscribe(function (suc) {
-                            self.disable = false;
-                            self.loadingEnd(self);
-                            //  alert("登陆完成："+JSON.stringify(suc));
-                            if (suc.error_code == 0) {
-                                self.setToken(suc.data.access_token);
-                                // self.navCtrl.push("tabs");
-                            }
-                            else if (suc.error_code == 2 && suc.data && suc.data.unionid) {
-                                //未通过微信找到用户信息
-                                self.showWeiXinLogin = false;
-                                self.unionid = suc.data.unionid;
-                                self.nickname = suc.data.nickname;
-                                self.avator = suc.data.avator;
-                                self.lp.alert("提示", "请验证手机号码");
-                            }
-                            else {
-                                self.lp.alert("提示", "登录失败，请使用手机验证码登录或稍后再试");
-                            }
-                        }, function (fail) {
-                            self.disable = false;
-                            self.loadingEnd(self);
-                            self.lp.alert("提示", "登录失败，请使用手机验证码登录或稍后再试");
-                        });
-                    });
-                }, function (fail) { self.disable = false; });
-            }
-            else {
-                self.lp.alert("提示", "您没有安装微信APP，因此无法使用此方式登录。");
-            }
-            _this.ref.detectChanges();
-        }, function (fail) {
-            _this.disable = false;
-        });
     };
     LoginPage.prototype.loadingInit = function () {
         this.loading = this.loadingCtrl.create({

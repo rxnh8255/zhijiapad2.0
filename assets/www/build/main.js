@@ -517,7 +517,7 @@ var Observer = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 117:
+/***/ 118:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -530,7 +530,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 117;
+webpackEmptyAsyncContext.id = 118;
 
 /***/ }),
 
@@ -540,7 +540,7 @@ webpackEmptyAsyncContext.id = 117;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpclientProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -595,7 +595,7 @@ var HttpclientProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 160:
+/***/ 161:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -608,11 +608,11 @@ var map = {
 		0
 	],
 	"../pages/login/login.module": [
-		308,
+		309,
 		5
 	],
 	"../pages/sueimiang/sueimiang.module": [
-		309,
+		308,
 		4
 	],
 	"../pages/switchlight/switchlight.module": [
@@ -639,12 +639,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 160;
+webpackAsyncContext.id = 161;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 161:
+/***/ 162:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -691,6 +691,9 @@ var LocalstorageProvider = /** @class */ (function () {
     LocalstorageProvider.prototype.remove = function (key) {
         this.localStorage.removeItem(key);
     };
+    LocalstorageProvider.prototype.getAll = function () {
+        return this.localStorage;
+    };
     LocalstorageProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [])
@@ -702,18 +705,18 @@ var LocalstorageProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NativeServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_app_version__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_app_version__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_in_app_browser__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_in_app_browser__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__httpclient_httpclient__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_constants__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -921,7 +924,7 @@ var NativeServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -985,7 +988,7 @@ var ExtendedUrlImg = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1474,7 +1477,7 @@ var EquipmentProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1522,13 +1525,13 @@ var PipesModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ColorPickerService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes__ = __webpack_require__(216);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1734,7 +1737,7 @@ var ColorPickerService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1797,7 +1800,7 @@ var SliderDimension = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1953,7 +1956,7 @@ var ExternalinterfaceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2064,7 +2067,7 @@ var SceneProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2632,43 +2635,43 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__filter_auto_fit_layout__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipe_module__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipe_module__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__extended_extendedurlimg__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autojob_autojob__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_localdata_localdata__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_localstorage_localstorage__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_localstorage_localstorage__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_httpclient_httpclient__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_delay_delay__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_doorlock_doorlock__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_equipment_equipment__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_externalinterface_externalinterface__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_externalinterface_externalinterface__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_intelligent_intelligent__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_lecheng_lecheng__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_log_log__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_login_login__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_room_room__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_scene_scene__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_scene_scene__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_timing_timing__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_usercenter_usercenter__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_colorpicker_lib_color_picker_service__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_usercenter_usercenter__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_colorpicker_lib_color_picker_service__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_constants_constants__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_barcode_scanner__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_demoprovider_demoprovider__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_native_service_native_service__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_app_version__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_native_service_native_service__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_app_version__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_file__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_in_app_browser__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_in_app_browser__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_file_transfer__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_native_audio__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_media__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_media__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__event_eventemitter__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_file_opener__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_android_permissions__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_streaming_media__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_file_opener__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_android_permissions__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_streaming_media__ = __webpack_require__(109);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2785,8 +2788,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../components/selectanfang/selectanfang.module#SelectanfangModule', name: 'selectanfang', segment: 'selectanfang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchlight/switchlight.module#SwitchlightPageModule', name: 'SwitchlightPage', segment: 'switchlight', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchrfwy/switchrfwy.module#SwitchrfwyPageModule', name: 'SwitchrfwyPage', segment: 'switchrfwy', priority: 'low', defaultHistory: [] }
@@ -3037,8 +3040,8 @@ var MyStyleWidthDirective = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_login_login__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_channel_channel__ = __webpack_require__(106);
@@ -3046,9 +3049,10 @@ var MyStyleWidthDirective = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_constants_constants__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_file__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_file_transfer__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_media__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_native_service_native_service__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_android_permissions__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_media__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_native_service_native_service__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_android_permissions__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_streaming_media__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3074,14 +3078,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, ionicApp, keyboard, file, txfr, audio, loginService, channelService, 
+    function MyApp(platform, statusBar, splashScreen, streamingMedia, ionicApp, keyboard, file, txfr, audio, loginService, channelService, 
         //private sceneService: SceneProvider,
         popoverCtrl, 
         //  private us: UsercenterProvider,
         ls, toastCtrl, androidPermissions, nativeService, window, ref, ngZone) {
         var _this = this;
         this.platform = platform;
+        this.streamingMedia = streamingMedia;
         this.ionicApp = ionicApp;
         this.keyboard = keyboard;
         this.file = file;
@@ -3110,7 +3116,9 @@ var MyApp = /** @class */ (function () {
         this.playNeedContinue = false; //是否继续播放
         this.playSceneContinue = false; //播放完情景以后是否继续
         this.canClickPlay = true; //可以再点击播音按钮不
-        this.CurrentTTSIndex = 0; //当前播放的TTS文字.如果有的话.暂停继续等都是TTS.如果是空的.就是暂停播放MP3
+        this.PlayMp3List = [];
+        this.ReadytoPlay = false;
+        this.CurrentIndex = 0; //mp3的播放列表index
         this.clickNext = false;
         this.clickPreview = false;
         this.AIUITalkList = [];
@@ -3134,13 +3142,9 @@ var MyApp = /** @class */ (function () {
                     console.log("用户用户");
                     mainThis.ls.setUser(data.data); //保存本地用户
                     mainThis.userInfo = data.data;
-                    //mainThis.updateAvator();
                     if (isNaN(mainThis.ls.getFamilyId()) || mainThis.ls.getFamilyId() == null || mainThis.ls.getFamilyId() == 0)
                         mainThis.ls.setFamilyId(data.data.last_family_id);
                     //cordova.plugins.VolumeControl.setVolume(0.5);
-                    // aiuiPlugin.registFamily("59",function(){
-                    //     console.log("AIUI成功注册家庭");
-                    // },function(){});
                     //启动signalr
                     mainThis.connectionState$ = mainThis.channelService.connectionState$
                         .map(function (state) { return __WEBPACK_IMPORTED_MODULE_6__providers_channel_channel__["b" /* ConnectionState */][state]; });
@@ -3157,7 +3161,6 @@ var MyApp = /** @class */ (function () {
                             }, function (err) { return mainThis.androidPermissions.requestPermission(mainThis.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE); });
                         }
                         //在线升级读写权限
-                        __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].register("updateavator", mainThis.eventUserData, mainThis); //修改头像事件注册
                         __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].register("openMenu", mainThis.openedMenu, mainThis); //打开菜单
                         __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].register("homePlayClick", mainThis.homePlayClick, mainThis); //homne上的按键响应
                         mainThis.refstyle();
@@ -3200,6 +3203,23 @@ var MyApp = /** @class */ (function () {
                             }, false);
                             var __this = mainThis;
                             zhijiaPlugin.registerNotify(function (res) {
+                                if (res.type === "media") {
+                                    var state = res.message;
+                                    console.log("m3u8状态:", state);
+                                    switch (state) {
+                                        case "stoped":
+                                            {
+                                                if (__this.playNeedContinue) {
+                                                    console.log("继续播放:");
+                                                    __this.CurrentIndex++;
+                                                    __this.play();
+                                                }
+                                            }
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
                                 if (res.type === "wakeup") {
                                     var wakeMsg = JSON.parse(res.message);
                                     console.log(wakeMsg);
@@ -3207,8 +3227,8 @@ var MyApp = /** @class */ (function () {
                                 }
                                 else if (res.type === "ttsStoped") {
                                     if (res.message === "wakeup") {
-                                        this.openedMenu();
-                                        this.AIUIBegin();
+                                        //this.openedMenu();
+                                        __this.AIUIBegin();
                                     }
                                 }
                                 else if (res.type === "nlp") {
@@ -3235,293 +3255,6 @@ var MyApp = /** @class */ (function () {
                                     }
                                 }
                             });
-                            //aiuiPlugin.wakeup();
-                            // aiuiPlugin.registerNotify(function (res) { 
-                            //     if (res.type === "wakeup") {
-                            //         let wakeMsg = JSON.parse(res.message);
-                            //         console.log(wakeMsg);
-                            //         switch (wakeMsg.word) {
-                            //             case "小智小智":
-                            //                 if (__this.pause()) {
-                            //                     __this.PlayNeedBack = true;
-                            //                 }
-                            //                 __this.playbackAIui = true;//播放完下一条就开启AIUI
-                            //                 aiuiPlugin.sleep();
-                            //                 //openMenu
-                            //                 // setTimeout(function(){
-                            //                 //     __this.playShortTTS("小智在.");
-                            //                 //     setTimeout(function(){
-                            //                 //         Emitter.fire("musicState", "openHomeMenu");
-                            //                 //         __this.AIUIBegin();
-                            //                 //     },2000);
-                            //                 // },1000);
-                            //                 break;
-                            //             case "播放":
-                            //                 __this.PlayNeedBack = false;
-                            //                 __this.playPlay();
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "播放" });
-                            //                 });
-                            //                 //__this.playShortTTS("播放");
-                            //                 break;
-                            //             case "暂停":
-                            //                 __this.PlayNeedBack = false;
-                            //                 __this.playPause();
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "暂停播放" });
-                            //                 });
-                            //                 //__this.playShortTTS("暂停播放");
-                            //                 break;
-                            //             case "上一首":
-                            //                 __this.PlayNeedBack = false;
-                            //                 __this.playPrevious();
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "上一首" });
-                            //                 });
-                            //                 //__this.playShortTTS("上一首");
-                            //                 break;
-                            //             case "下一首":
-                            //                 __this.PlayNeedBack = false;
-                            //                 __this.playNext();
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "播放下一首" });
-                            //                 });
-                            //                 //__this.playShortTTS("下一首");
-                            //                 break;
-                            //             case "增大音量":
-                            //                 Emitter.fire("musicState", "volume_plus");
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调高10%" });
-                            //                 });
-                            //                 //__this.playShortTTS("音量已调高");
-                            //                 break;
-                            //             case "减小音量":
-                            //                 Emitter.fire("musicState", "volume_minus");
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调低10%" });
-                            //                 });
-                            //                 //__this.playShortTTS("音量已调低");
-                            //                 break;
-                            //             case "打开电灯":
-                            //                 break;
-                            //             case "关闭电灯":
-                            //                 break;
-                            //             default:
-                            //                 break;
-                            //         }
-                            //     }
-                            //     else if (res.type === "nlp") {
-                            //         //解析的语义
-                            //         let aiuiMessage = JSON.parse(res.message);
-                            //         console.log(aiuiMessage);
-                            //         if (aiuiMessage.intent !== undefined && aiuiMessage.intent.text !== undefined) {
-                            //             __this.ngZone.run(() => {
-                            //                 __this.AIUITalkList.push({ isSelf: true, text: aiuiMessage.intent.text });
-                            //             });
-                            //         }
-                            //         if (aiuiMessage.intent !== undefined) {
-                            //             if (aiuiMessage.intent.service === "ZHIJIAIOT.smartHome") {
-                            //                 let family_id = __this.ls.getFamilyId();
-                            //                 __this.loginService.InvokeAiui(family_id, JSON.stringify(aiuiMessage)).subscribe(invokeAiData => {
-                            //                     console.log(invokeAiData);
-                            //                     __this.ngZone.run(() => {
-                            //                         __this.AIUITalkList.push({ isSelf: false, text: invokeAiData.data.content });
-                            //                     });
-                            //                     // if (__this.pause()) {
-                            //                     //     __this.PlayNeedBack = true;
-                            //                     // }
-                            //                     //__this.pause(); //直接播放.自己会中断
-                            //                     __this.playShortTTS(invokeAiData.data.content);
-                            //                 });
-                            //             } else if (aiuiMessage.intent.service === "weather") {
-                            //                 //播放天气,直接打断原来的TTS播放或者是MP3播放,等放完以后继续.
-                            //                 //__this.pause();
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: aiuiMessage.intent.answer.text });
-                            //                 });
-                            //                 __this.playShortTTS(aiuiMessage.intent.answer.text);
-                            //                 //__this.insertQueue({ type: "tts", content: aiuiMessage.intent.answer.text, state: "stop" });
-                            //                 //__this.play();
-                            //             } else if (aiuiMessage.intent.service === "news") {
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: aiuiMessage.intent.answer.text });
-                            //                 });
-                            //                 __this.releaseQueue();//要播放新闻的话,释放当前队列
-                            //                 aiuiMessage.intent.data.result.forEach(newModel => {
-                            //                     //添加到队列
-                            //                     //__this.addQueue({ type: "tts", content: newModel.content, state: "stop" });
-                            //                     __this.addQueue({ type: "news", url: newModel.url, content: newModel.content, state: "stop" });
-                            //                 });
-                            //                 __this.play();
-                            //             } else if (aiuiMessage.intent.service === "musicX") { //处理音乐播放逻辑
-                            //                 if (aiuiMessage.intent.semantic[0].intent === "RANDOM_SEARCH") { //播放
-                            //                     __this.PlayNeedBack = false;
-                            //                     __this.playShortTTS("正在缓冲");
-                            //                     __this.releaseQueue();
-                            //                     let family_id = __this.ls.getFamilyId();
-                            //                     __this.loginService.GetBgJson(family_id).subscribe(bgData => {
-                            //                         bgData = bgData.sort(function () { Math.random() - 0.5 });
-                            //                         for (let i = 0; i < bgData.length; i++) {
-                            //                             let name = bgData[i];
-                            //                             __this.addQueue({ type: "mp3", bgname: name, state: "stop" });
-                            //                         }
-                            //                         __this.play();
-                            //                     });
-                            //                 } else if (aiuiMessage.intent.semantic[0].intent === "INSTRUCTION") {//音乐控制
-                            //                     if (aiuiMessage.intent.semantic[0].slots.length > 0) {
-                            //                         switch (aiuiMessage.intent.semantic[0].slots[0].value) {
-                            //                             case "next":
-                            //                                 __this.PlayNeedBack = false;
-                            //                                 __this.playNext();
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "播放下一首" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("播放下一首");
-                            //                                 break;
-                            //                             case "past":
-                            //                                 __this.PlayNeedBack = false;
-                            //                                 __this.playPrevious();
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "播放上一首" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("播放上一首");
-                            //                                 break;
-                            //                             case "pause":
-                            //                                 __this.PlayNeedBack = false;
-                            //                                 __this.playPause();
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "暂停播放" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("暂停播放");
-                            //                                 break;
-                            //                             case "replay":
-                            //                                 __this.PlayNeedBack = false;
-                            //                                 __this.playPlay();
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "继续播放" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("继续播放");
-                            //                                 break;
-                            //                             case "volume_plus":
-                            //                                 Emitter.fire("musicState", "volume_plus");
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调高10%" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("音量已调高");
-                            //                                 break;
-                            //                             case "volume_minus":
-                            //                                 Emitter.fire("musicState", "volume_minus");
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调低10%" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("音量已调低");
-                            //                                 break;
-                            //                             case "volume_max":
-                            //                                 Emitter.fire("musicState", "volume_max");
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调到最高" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("音量已调到最高");
-                            //                                 break;
-                            //                             case "volume_min":
-                            //                                 Emitter.fire("musicState", "volume_min");
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调到最低" });
-                            //                                 });
-                            //                                 //__this.playShortTTS("音量已调到最低");
-                            //                                 break;
-                            //                             case "volume_select":
-                            //                                 let volumeNum = aiuiMessage.intent.semantic[0].slots[1].value;
-                            //                                 Emitter.fire("musicState", "volume_select", volumeNum);
-                            //                                 __this.ngZone.run(() => {
-                            //                                     __this.AIUITalkList.push({ isSelf: false, text: "音量已调到" + volumeNum });
-                            //                                 });
-                            //                                 //__this.playShortTTS("音量已调整");
-                            //                                 break;
-                            //                             default:
-                            //                                 break;
-                            //                         }
-                            //                     }
-                            //                 }
-                            //             }
-                            //             else if (aiuiMessage.intent.text) {
-                            //                 __this.ngZone.run(() => {
-                            //                     __this.AIUITalkList.push({ isSelf: false, text: "暂未处理:" + aiuiMessage.intent.text });
-                            //                 });
-                            //                 __this.playShortTTS("小智没听懂您的话.");
-                            //                 //__this.MyTalk = "其他:"+aiuiMessage.intent.text;
-                            //             }
-                            //         }
-                            //     }
-                            //     else if (res.type === "start") { //开始说话
-                            //         __this.ngZone.run(() => {
-                            //             __this.ShouAIUIStatue = true;
-                            //         });
-                            //         if (__this.pause()) {
-                            //             __this.PlayNeedBack = true;
-                            //         }
-                            //     } else if (res.type === "stop") { //结束说话
-                            //         console.log("结束说话,开启唤醒");
-                            //         setTimeout(() => {
-                            //             aiuiPlugin.wakeup(); //重新打开唤醒
-                            //         }, 1500);
-                            //         __this.ngZone.run(() => {
-                            //             __this.ShouAIUIStatue = false;
-                            //         });
-                            //         //应该判断是否解析出语义了
-                            //     } else if (res.type === "ttsState") { //tts的播放状态
-                            //         switch (res.message) {
-                            //             case "completed": //TTS播放完了.
-                            //                 //不管TTS的播放.播放完以后会自动继续播放
-                            //                 if (__this.playbackAIui) //这个优先级最高
-                            //                 {
-                            //                     __this.playbackAIui = false;
-                            //                     Emitter.fire("musicState", "openHomeMenu");
-                            //                     __this.ShouAIUIStatue = true;
-                            //                     aiuiPlugin.start(function () { }, function () { });
-                            //                 }
-                            //                 if (__this.PlayNeedBack) {
-                            //                     __this.PlayNeedBack = false;
-                            //                     __this.play();
-                            //                 }
-                            //                 break;
-                            //             case "begin":
-                            //                 break;
-                            //             case "paused":
-                            //                 break;
-                            //             case "resumed":
-                            //                 break;
-                            //             default:
-                            //                 break;
-                            //         }
-                            //     }
-                            //     else if (res.type === "sleep") {
-                            //         console.log("sleepsleep");
-                            //         if (__this.playbackAIui) {
-                            //             //__this.playbackAIui = true;//播放完下一条就开启AIUI
-                            //             __this.playShortTTS("小智在.");
-                            //         }else
-                            //         {
-                            //             __this.ShouAIUIStatue = true;
-                            //             aiuiPlugin.start(function () { }, function () { });
-                            //         }
-                            //     }
-                            //     if (res.type !== "volume" && res.type !== "ttsSpeakProgress" && res.service !== undefined) {
-                            //         console.log(res);
-                            //     }
-                            // }, function (err) {
-                            //     console.log(err);
-                            // });
-                            // let family_id = mainThis.ls.getFamilyId();
-                            // mainThis.loginService.GetSceneJson(family_id).subscribe(sceneData => {
-                            //     //console.log("情景mp3数据",sceneData);
-                            //     sceneData.forEach(s => {
-                            //         let needdown = mainThis.ls.getSceneNeedDown(s.name, s.md5);
-                            //         if (needdown) {
-                            //             mainThis.download("https://oss.zhijiaiot.com/assets/demo/" + family_id + "/" + s.name + ".mp3", s);
-                            //         }
-                            //     });
-                            // });
                         });
                     });
                     mainThis.getFindProductAll(function (product) {
@@ -3561,22 +3294,96 @@ var MyApp = /** @class */ (function () {
             _this.showclass = "tips-list-edit";
         });
         this.channelService.sub("PadAction").subscribe(function (data) {
+            console.log(data);
             if (data.data.tts != undefined) {
-                zhijiaPlugin.ttsStop();
+                _this.stopall();
                 zhijiaPlugin.ttsPlay(data.data.tts.content, "normal");
             }
             else if (data.data.play != undefined) {
-                switch (data.data.play.category) {
-                    case "news":
-                        break;
-                    case "voice"://开启识别
+                switch (data.data.play.command) {
+                    case "play":
                         {
-                            var wakewords = data.data.play.ext_param.split(',');
-                            var wakeword = wakewords[Math.floor(Math.random() * (wakewords.length + 1))];
-                            zhijiaPlugin.ttsPlay(wakeword, "wakeup");
-                            break;
+                            switch (data.data.play.category) {
+                                case "voice"://开启识别
+                                    {
+                                        _this.stopall();
+                                        __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "openHomeMenu");
+                                        _this.ShouAIUIStatue = true;
+                                        _this.openedMenu();
+                                        var wakewords = data.data.play.ext_param.split(',');
+                                        console.log(wakewords);
+                                        var ind = Math.floor(Math.random() * (wakewords.length + 1));
+                                        var wakeword = wakewords[ind];
+                                        if (wakeword == undefined)
+                                            wakeword = wakewords[0];
+                                        zhijiaPlugin.ttsPlay(wakeword, "wakeup");
+                                        break;
+                                    }
+                                case "news":
+                                case "music":
+                                    {
+                                        //this.ReadytoPlay = false;
+                                        _this.stopall();
+                                        var songs = data.data.play.ext_param.split(',');
+                                        _this.PlayMp3List = _this.shuffle(songs);
+                                        _this.ls.setScreenShow(false); //不显示屏保
+                                        mainThis.playNeedContinue = true;
+                                        mainThis.play();
+                                        // let inter = setInterval( () =>{
+                                        //     if(mainThis.ReadytoPlay){
+                                        //         mainThis.ReadytoPlay = false;
+                                        //         mainThis.playNeedContinue = true;
+                                        //         mainThis.play();
+                                        //         clearTimeout(inter);
+                                        //     }
+                                        // },100);
+                                    }
+                                    break;
+                                case "stop":
+                                    {
+                                        _this.stopall();
+                                    }
+                                    break;
+                                case "local":
+                                    {
+                                        _this.ReadytoPlay = false;
+                                        _this.stopall();
+                                        var songs = [];
+                                        var allLs = _this.ls.getAll();
+                                        console.log("alllist", allLs);
+                                        for (var key in allLs) {
+                                            if (key.indexOf('http') > -1) {
+                                                songs.push(key);
+                                            }
+                                        }
+                                        _this.PlayMp3List = _this.shuffle(songs);
+                                        console.log("本地local播放列表:" + _this.PlayMp3List);
+                                        _this.ls.setScreenShow(false); //不显示屏保
+                                        mainThis.playNeedContinue = true;
+                                        mainThis.play();
+                                        // let inter = setInterval( () =>{
+                                        //     if(mainThis.ReadytoPlay){
+                                        //         mainThis.ReadytoPlay = false;
+                                        //         mainThis.playNeedContinue = true;
+                                        //         mainThis.play();
+                                        //         clearTimeout(inter);
+                                        //     }
+                                        // },100);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
-                    case "music":
+                        break;
+                    case "stop":
+                        _this.stopall();
+                        break;
+                    case "":
+                        if (data.data.play.category === "volume") {
+                            var vol = parseInt(data.data.play.ext_param) / 100;
+                            cordova.plugins.VolumeControl.setVolume(vol);
+                        }
                         break;
                     default:
                         break;
@@ -3628,73 +3435,33 @@ var MyApp = /** @class */ (function () {
             // }
         });
     }
+    MyApp.prototype.shuffle = function (arr) {
+        var i, j, temp;
+        for (i = arr.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        return arr;
+    };
+    ;
     MyApp.prototype.homePlayClick = function (eventName, state) {
         console.log(state);
         switch (state) {
             case "playPlay":
-                this.playPlay();
+                //this.playPlay();
                 break;
             case "playPause":
-                this.playPause();
+                //this.playPause();
                 break;
             case "playNext":
-                this.playNext();
+                //this.playNext();
                 break;
             case "playPrevious":
-                this.playPrevious();
+                //this.playPrevious();
                 break;
         }
-    };
-    MyApp.prototype.playPause = function () {
-        if (this.canClickPlay) {
-            console.log("playpuse");
-            this.pause();
-            this.PlayNeedBack = false;
-            this.playNeedContinue = false;
-        }
-        else {
-            this.ls.alert("提示", "正在执行,请稍候点击");
-        }
-    };
-    MyApp.prototype.playPlay = function () {
-        if (this.canClickPlay) {
-            this.playNeedContinue = true;
-            var flag_1 = true;
-            this.PlayQueue.forEach(function (queue, index) {
-                if (queue.state !== "stoped")
-                    flag_1 = false;
-            });
-            if (flag_1) {
-                this.releaseQueue();
-                var family_id = this.ls.getFamilyId();
-                var __this_1 = this;
-                this.loginService.GetBgJson(family_id).subscribe(function (bgData) {
-                    bgData = bgData.sort(function () { Math.random() - 0.5; });
-                    console.log(bgData);
-                    for (var i = 0; i < bgData.length; i++) {
-                        var name_1 = bgData[i];
-                        __this_1.addQueue({ type: "mp3", bgname: name_1, state: "stop" });
-                    }
-                    // bgData.forEach(bgName => {
-                    //     __this.addQueue({ type: "mp3", bgname: bgName, state: "stop" });
-                    // });
-                    __this_1.play();
-                });
-            }
-            else
-                this.play();
-        }
-        else {
-            this.ls.alert("提示", "正在执行,请稍候点击");
-        }
-    };
-    MyApp.prototype.autoScroll = function () {
-        // setTimeout(function () {
-        //     if(this.scroll){
-        //         console.log(this.scroll);
-        //         this.scroll._scrollContent.nativeElement.scrollTop = this.scroll._scrollContent.nativeElement.scrollHeight;
-        //     }
-        // }, 10);
     };
     //播放普通的TTS文字
     MyApp.prototype.playShortTTS = function (content) {
@@ -3703,223 +3470,127 @@ var MyApp = /** @class */ (function () {
             zhijiaPlugin.ttsPlay(content + "", "normal");
         }
     };
-    //重置队列
-    MyApp.prototype.releaseQueue = function () {
-        this.PlayNeedBack = false;
-        this.PlayQueue = [];
-        if (this.CurrentPlay !== undefined) {
-            this.CurrentPlay.release();
-            this.CurrentPlay = undefined;
-        }
-        //aiuiPlugin.ttsStop();
-    };
-    //{"type":"tts/mp3","bgname":"mp3的名称,具体下载将在播放前进行","content":"tts内容","state":"stop/play/pause/stoped/back"}
-    //添加到队列中
-    MyApp.prototype.addQueue = function (playModel) {
-        this.PlayQueue.push(playModel);
-    };
-    //插入队列,把要播放的内容放到下一个
-    MyApp.prototype.insertQueue = function (playModel) {
-        var flag = true;
-        for (var i = 0; i < this.PlayQueue.length; i++) {
-            var queue = this.PlayQueue[i];
-            if (queue.state !== "stoped") {
-                this.PlayQueue.splice(i + 1, 0, playModel);
-                flag = false;
-                break;
-            }
-        }
-        if (flag) {
-            this.addQueue(playModel);
-        }
-    };
     //播放
     MyApp.prototype.play = function () {
-        var __this = this;
-        console.log(this.PlayQueue);
-        for (var i = 0; i < this.PlayQueue.length; i++) {
-            var queue = this.PlayQueue[i];
-            if (queue.state !== "stoped") {
-                __this.CurrentTTSIndex = i;
-                if (queue.state === "pause") {
-                    if (queue.type === "mp3" || queue.type === "smp3" || queue.type === "news") {
-                        __this.CurrentPlay.play();
-                    }
-                    //} else if (queue.state === "stop") { //是停止的,就开始播放这个资源
-                }
-                else {
-                    if (__this.CurrentPlay !== undefined) {
-                        __this.CurrentPlay.release();
-                        __this.CurrentPlay = undefined;
-                    }
-                    if (queue.type === "mp3") {
-                        __this.downloadandPlayBg(queue.bgname);
-                    }
-                    else if (queue.type === "smp3") {
-                        __this.playBgMusic(queue.url);
-                    }
-                    else if (queue.type === "news") {
-                        __this.downloadPlayMp3(queue.url);
-                    }
-                }
-                break;
+        console.log(this.PlayMp3List);
+        var url = this.PlayMp3List[this.CurrentIndex];
+        console.log(url);
+        if (url !== undefined) {
+            var extent = url.substring(url.lastIndexOf("."));
+            if (extent === ".m3u8") {
+                zhijiaPlugin.playAudio(url);
             }
-        }
-    };
-    MyApp.prototype.pause = function () {
-        var __this = this;
-        console.log("调用暂停", __this.PlayQueue);
-        // __this.PlayNeedBack = false;
-        // if(__this.CurrentPlay !== undefined)
-        //     __this.CurrentPlay.pause();
-        //aiuiPlugin.ttsPause();
-        for (var i = 0; i < __this.PlayQueue.length; i++) {
-            var queue = __this.PlayQueue[i];
-            if (queue.state !== "stoped") {
-                if (queue.state === "play") {
-                    if (queue.type === "mp3" || queue.type === "smp3" || queue.type === "news") {
-                        __this.CurrentPlay.pause();
-                    }
-                    //queue.state = "pause";
-                    return true;
-                }
-                else {
-                    //queue.state = "pause";
-                    return false;
-                }
+            else if (url.indexOf("file://") > -1) {
+                this.playBgMusic(url);
             }
-        }
-        return false;
-    };
-    MyApp.prototype.playNext = function () {
-        if (this.canClickPlay) {
-            //比长度小1才有下一首
-            //if (this.CurrentTTSIndex < this.PlayQueue.length - 1) {
-            //把当前歌曲暂停.
-            this.playNeedContinue = true;
-            this.clickNext = true;
-            if (this.CurrentPlay != undefined)
-                this.CurrentPlay.stop();
-            else
-                this.play();
-            //}
-        }
-        else {
-            this.ls.alert("提示", "正在执行,请稍候点击");
-        }
-    };
-    MyApp.prototype.playPrevious = function () {
-        if (this.canClickPlay) {
-            this.playNeedContinue = true;
-            this.clickPreview = true;
-            if (this.CurrentPlay != undefined)
-                this.CurrentPlay.stop();
-            else {
-                this.play();
+            else if (extent === ".mp3" || extent === ".m4a") {
+                this.downloadandPlayBg(url);
             }
         }
         else {
-            this.ls.alert("提示", "正在执行,请稍候点击");
+            this.playNeedContinue = false;
+            this.ls.setScreenShow(true); //显示屏保
         }
     };
-    MyApp.prototype.playBgMusic = function (nativeUrl) {
-        var _this = this;
-        this.canClickPlay = true;
-        this.CurrentPlay = this.audio.create(nativeUrl);
-        this.CurrentPlay.onStatusUpdate.subscribe(function (status) {
-            //2.播放,3.暂停.4停止
-            console.log("index:" + _this.CurrentTTSIndex + ",触发的状态:" + status);
-            if (status === 4) {
-                __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "stoped");
-                //资源释放了
-                if (_this.CurrentPlay !== undefined) {
-                    _this.CurrentPlay.release();
-                }
-                _this.PlayQueue[_this.CurrentTTSIndex].state = "stoped";
-                if (_this.PlayQueue[_this.CurrentTTSIndex].type === "smp3") {
-                    _this.PlayQueue.splice(_this.CurrentTTSIndex, 1);
-                }
-                if (_this.clickNext) {
-                    _this.clickNext = false;
-                    if (_this.CurrentTTSIndex === _this.PlayQueue.length - 1)
-                        _this.CurrentTTSIndex = 0;
-                    _this.play();
-                }
-                else if (_this.clickPreview) {
-                    _this.clickPreview = false;
-                    if (_this.CurrentTTSIndex <= _this.PlayQueue.length) {
-                        _this.PlayQueue[_this.CurrentTTSIndex].state = "stop";
-                        if (_this.CurrentTTSIndex === 0)
-                            _this.CurrentTTSIndex = _this.PlayQueue.length;
-                        _this.PlayQueue[_this.CurrentTTSIndex - 1].state = "stop";
-                        _this.play();
-                    }
-                }
-                else if (_this.playSceneContinue) {
-                    _this.playSceneContinue = false;
-                    _this.play();
-                }
-                else if (_this.playNeedContinue) {
-                    _this.play();
-                }
-            }
-            else if (status === 2) {
-                _this.PlayQueue[_this.CurrentTTSIndex].state = "play";
-                __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "play");
-            }
-            else if (status === 3) {
-                _this.PlayQueue[_this.CurrentTTSIndex].state = "pause";
-                __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "pause");
-            }
-            console.log("onStatusUpdate:" + _this.CurrentTTSIndex, _this.PlayQueue);
-        });
-        this.CurrentPlay.play();
-    };
-    MyApp.prototype.downloadandPlayBg = function (bgName) {
-        //aiuiPlugin.ttsPlay("正在缓冲音乐。。", function () { }, function () { });
-        this.canClickPlay = false;
-        // let needdown = this.ls.getBgNeedDown(bgName);
-        // if (needdown) {
-        //     let family_id = this.ls.getFamilyId();
-        //     let url = "https://oss.zhijiaiot.com/assets/demo/" + family_id + "/" + bgName;
-        //     let ft: FileTransferObject = this.txfr.create();
-        //     let fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
-        //     ft.download(url, fn).then(
-        //         (fe: FileEntry) => {
-        //             let bgmusic = { name: bgName, nativeURL: fe.nativeURL };
-        //             this.ls.setBg(bgmusic);
-        //             this.playBgMusic(fe.nativeURL);
-        //         },
-        //         err => {
-        //             console.log(JSON.stringify(err));
-        //         }
-        //     );
-        // } else {
-        //     let bgModel = this.ls.getBg(bgName);
-        //     this.playBgMusic(bgModel.nativeURL);
+    MyApp.prototype.stopall = function () {
+        this.playNeedContinue = false;
+        this.ls.setScreenShow(true); //显示屏保
+        // if(this.PlayMp3List.length ===0){
+        //     this.ReadytoPlay = true;
+        // }
+        this.PlayMp3List = [];
+        this.CurrentIndex = 0;
+        this.streamingMedia.stopAudio();
+        zhijiaPlugin.ttsStop();
+        zhijiaPlugin.stopAudio();
+        // if (this.CurrentPlay !== undefined) {
+        //     this.CurrentPlay.stop();
+        //     // this.CurrentPlay.release();
+        //     // this.CurrentPlay = undefined;
         // }
     };
-    MyApp.prototype.downloadPlayMp3 = function (url) {
-        var _this = this;
-        var ft = this.txfr.create();
-        var fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
-        ft.download(url, fn).then(function (fe) {
-            _this.playBgMusic(fe.nativeURL);
-        }, function (err) {
-            console.log(JSON.stringify(err));
-        });
+    MyApp.prototype.playBgMusic = function (nativeUrl) {
+        zhijiaPlugin.playAudio(nativeUrl);
+        // this.canClickPlay = true;
+        // this.CurrentPlay = this.audio.create(nativeUrl);
+        // this.CurrentPlay.onStatusUpdate.subscribe(status => {
+        //     //2.播放,3.暂停.4停止
+        //     console.log("触发的状态:" + status);
+        //     if (status === 4) { //停止
+        //         //Emitter.fire("musicState", "stoped");
+        //         //资源释放了
+        //         if (this.CurrentPlay !== undefined) {
+        //             this.CurrentPlay.release();
+        //         }
+        //         if (this.playNeedContinue) {
+        //             console.log("继续播放:");
+        //             this.CurrentIndex++;
+        //             this.play();
+        //         }else{
+        //             this.ReadytoPlay = true; //停了就可以再播了
+        //         }
+        //     } else if (status === 2) {
+        //         //this.PlayQueue[this.CurrentTTSIndex].state = "play";
+        //         //Emitter.fire("musicState", "play");
+        //     }
+        //     else if (status === 3) {
+        //         //this.PlayQueue[this.CurrentTTSIndex].state = "pause";
+        //         //Emitter.fire("musicState", "pause");
+        //     }
+        //     //console.log("onStatusUpdate:" + this.CurrentTTSIndex, this.PlayQueue);
+        // });
+        // this.CurrentPlay.play();
     };
-    MyApp.prototype.download = function (url, scene) {
-        var _this = this;
-        var ft = this.txfr.create();
-        var fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
-        ft.download(url, fn).then(function (fe) {
-            scene.nativeURL = fe.nativeURL;
-            _this.ls.setScene(scene);
-        }, function (err) {
-            console.log(JSON.stringify(err));
-        });
+    MyApp.prototype.downloadandPlayBg = function (url) {
+        this.canClickPlay = false;
+        this.ls.setResource(url, url);
+        this.playBgMusic(url);
+        // let needdown = this.ls.getResourceNeedDown(url);
+        // if (needdown) {
+        //     this.ls.setResource(url,url);
+        //     this.playBgMusic(url);
+        //     // //let url = "https://oss.zhijiaiot.com/assets/demo/" + family_id + "/" + bgName;
+        //     // let ft: FileTransferObject = this.txfr.create();
+        //     // let fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
+        //     // ft.download(url, fn).then(
+        //     //     (fe: FileEntry) => {
+        //     //         this.ls.setResource(url,fe.nativeURL);
+        //     //         this.playBgMusic(url);
+        //     //     },
+        //     //     err => {
+        //     //         console.log(JSON.stringify(err));
+        //     //     }
+        //     // );
+        // } else {
+        //     //let nativeURL = this.ls.getResource(url);
+        //     this.playBgMusic(url);
+        // }
     };
+    // private downloadPlayMp3(url: string) {
+    //     let ft: FileTransferObject = this.txfr.create();
+    //     let fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
+    //     ft.download(url, fn).then(
+    //         (fe: FileEntry) => {
+    //             this.playBgMusic(fe.nativeURL);
+    //         },
+    //         err => {
+    //             console.log(JSON.stringify(err));
+    //         }
+    //     );
+    // }
+    // private download(url: string, scene: any) {
+    //     let ft: FileTransferObject = this.txfr.create();
+    //     let fn = this.file.dataDirectory + url.substring(url.lastIndexOf('/') + 1);
+    //     ft.download(url, fn).then(
+    //         (fe: FileEntry) => {
+    //             scene.nativeURL = fe.nativeURL;
+    //             this.ls.setScene(scene);
+    //         },
+    //         err => {
+    //             console.log(JSON.stringify(err));
+    //         }
+    //     );
+    // }
     MyApp.prototype.refstyle = function () {
         this.displayMethod = this.ls.getDisplayMethod();
         if (this.displayMethod === 0 || this.displayMethod === 1) {
@@ -4077,6 +3748,7 @@ var MyApp = /** @class */ (function () {
         });
     };
     MyApp.prototype.AIUIBegin = function () {
+        this.stopall();
         //aiuiPlugin.sleep();//先睡眠.读完以后再开启
         this.ShouAIUIStatue = true;
         zhijiaPlugin.start();
@@ -4089,32 +3761,6 @@ var MyApp = /** @class */ (function () {
     };
     MyApp.prototype.close = function () {
         this.showclass = "tips-list-edit-hide";
-    };
-    //头像修改更新
-    MyApp.prototype.updateAvator = function () {
-        if (this.userInfo !== null && this.userInfo.avator !== null && this.userInfo.avator.length > 0) {
-            this.t = Math.random();
-            this.userInfoImg = 'http://iot.image.alimmdn.com/avator/' + this.userInfo.avator + '@90w_90h.jpg?t=' + this.t;
-        }
-        else {
-            this.userInfoImg = this.window.nativeWindow.config.host + 'assets/img/user_profile_default.png';
-        }
-        this.ref.detectChanges();
-    };
-    MyApp.prototype.eventUserData = function () {
-        var _this = this;
-        if (this.userInfo !== null && this.userInfo.avator !== null && this.userInfo.avator.length > 0) {
-            this.updateAvator();
-        }
-        else {
-            this.getUser(function (data) {
-                if (data.error_code === 0) {
-                    _this.ls.setUser(data.data); //保存本地用户
-                    _this.userInfo = data.data;
-                    _this.updateAvator();
-                }
-            });
-        }
     };
     MyApp.prototype.openedMenu = function () {
         this.AIUITalkList = [];
@@ -4152,6 +3798,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_14__ionic_native_streaming_media__["a" /* StreamingMedia */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicApp */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Keyboard */],
             __WEBPACK_IMPORTED_MODULE_9__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_10__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_11__ionic_native_media__["a" /* Media */],
@@ -4724,7 +4371,7 @@ var TimingProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__localstorage_localstorage__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__localstorage_localstorage__ = __webpack_require__(162);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4801,6 +4448,23 @@ var LocaldataProvider = /** @class */ (function () {
     //读取本地存储对象
     LocaldataProvider.prototype.getLocalStorageAny = function (key) {
         return this.ls.getObject(key);
+    };
+    LocaldataProvider.prototype.getResourceNeedDown = function (url) {
+        var lsBg = this.getLocalStorageAny(url);
+        if (this.isEmpty(lsBg)) {
+            return true;
+        }
+        return false;
+    };
+    LocaldataProvider.prototype.getResource = function (url) {
+        return this.getLocalStorageAny(url);
+    };
+    //{"name":"bgName","nativeURL","file://"}
+    LocaldataProvider.prototype.setResource = function (url, nativeURL) {
+        this.setLocalStorageAny(url, nativeURL);
+    };
+    LocaldataProvider.prototype.getAll = function () {
+        return this.ls.getAll();
     };
     LocaldataProvider.prototype.getBgNeedDown = function (name) {
         var lsBg = this.getLocalStorageAny("bg" + name);
@@ -5137,6 +4801,19 @@ var LocaldataProvider = /** @class */ (function () {
     //提示左滑信息
     LocaldataProvider.prototype.getPromptInformation = function () {
         return this.getLocalStorageAny("promptinformation");
+    };
+    //设置是否显示屏保
+    LocaldataProvider.prototype.setScreenShow = function (state) {
+        this.setLocalStorageAny("ScreenShowState", state);
+    };
+    LocaldataProvider.prototype.getScreenShow = function () {
+        var state = this.getLocalStorageAny("ScreenShowState");
+        if (state !== true && state !== false) {
+            this.setScreenShow(true);
+            return true;
+        }
+        else
+            return state;
     };
     //设置情景播放是否打开
     LocaldataProvider.prototype.setPlayScene = function (state) {

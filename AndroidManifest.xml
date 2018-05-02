@@ -4,7 +4,7 @@
   package="com.zhijiaiot.app"
   android:hardwareAccelerated="true"
   android:versionCode="10016"
-  android:versionName="1.0.658">
+  android:versionName="1.0.673">
 
   <uses-sdk
     android:minSdkVersion="16"
@@ -18,6 +18,7 @@
     android:smallScreens="true"
     android:xlargeScreens="true" />
 
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -32,6 +33,8 @@
   <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
 
   <application
     android:hardwareAccelerated="true"
@@ -48,6 +51,14 @@
     <meta-data
       android:name="com.baidu.speech.SECRET_KEY"
       android:value="fda5a5cfbce396f20b21c3510412989d" />
+
+    <receiver android:name=".ContentReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <category android:name="android.intent.category.LAUNCHER" />
+
+      </intent-filter>
+    </receiver>
 
     <service
       android:name="com.baidu.speech.VoiceRecognitionService"

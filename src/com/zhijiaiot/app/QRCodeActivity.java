@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ import com.zsoft.signala.hubs.HubInvocationMessage;
 import com.zsoft.signala.hubs.HubInvokeCallback;
 import com.zsoft.signala.hubs.IHubProxy;
 import com.zsoft.signala.transport.StateBase;
+import com.zsoft.signala.transport.longpolling.DisconnectedState;
 import com.zsoft.signala.transport.longpolling.LongPollingTransport;
 
 import org.json.JSONException;
@@ -48,6 +51,17 @@ public class QRCodeActivity extends Activity {
   private final static String TAG = "lcm";
   ImageView imageView;
   TextView qrcodemsg;
+  Button logButton;
+
+  /**
+   * hub链接
+   */
+  private HubConnection conn;
+
+  /*
+   * hub代理 panderman 2013-10-25
+   */
+  private IHubProxy hub = null;
 
   private boolean firstConnection = true;
 
@@ -58,149 +72,209 @@ public class QRCodeActivity extends Activity {
 
     imageView = findViewById(R.id.qrcodeimg);
     qrcodemsg = findViewById(R.id.qrcodemsg);
+    logButton = findViewById(R.id.logButton);
 
     deviceID = CommonUtil.getDeviceUniqueID();
     qrcodemsg.setText("正在登陆,请稍等");
     startMainActivity();
-  }
 
-  private void startMainActivity() {
-    //判断本地是否登陆了,没登陆去扫码
+    //logButton.setVisibility(View.GONE);
+    logButton.setText("刷新");
+    logButton.setOnClickListener(new View.OnClickListener(){
 
-    if ("".equals(ZhijiaPreferenceUtil.getAccessToken(QRCodeActivity.this))) {
-
-      beginConnect();
-
-    } else {
-      HttpUtil.httpPost(QRCodeActivity.this, ZhiJiaUrl.Account, "{}", new Callback() {
-        @Override
-        public void onFailure(Call call, IOException e) {
-          Log.i("kwwl", "onFailure: " + e.getMessage());
-        }
-
-        @Override
-        public void onResponse(Call call, Response response) throws IOException {
-          if (response.isSuccessful()) {
-            try {
-              String data = response.body().string();
-              final JSONObject object = new JSONObject(data);
-              if (object.getInt("error_code") != 0) {
-                final Handler mainHandler = new Handler(Looper.getMainLooper());
-                mainHandler.post(new Runnable() {
-                  @Override
-                  public void run() {
-                    try {
-                      Toast.makeText(QRCodeActivity.this,
-                        object.getString("error_message"),
-                        Toast.LENGTH_SHORT)
-                        .show();
-                    } catch (JSONException e) {
-                      e.printStackTrace();
-                    }
-
-                    beginConnect();
-                  }
-                });
-              } else {
-                //FamilyUtil.saveFamily(object);
-                final Handler mainHandler = new Handler(Looper.getMainLooper());
-                mainHandler.post(new Runnable() {
-                  @Override
-                  public void run() {
-                    Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                  }
-                });
-              }
-            } catch (IOException e) {
-              e.printStackTrace();
-            } catch (JSONException e) {
-              e.printStackTrace();
-            }
-          }
-        }
-      });
-    }
-
-  }
-
-  /**
-   * hub链接
-   */
-  private HubConnection conn = new HubConnection(ZhiJiaUrl.HUB_URL, this, new LongPollingTransport()) {
-    @Override
-    public void OnError(Exception exception) {
-      Log.d(TAG, "OnError=" + exception.getMessage());
-    }
-
-    @Override
-    public void OnMessage(String message) {
-      Log.d(TAG, "message=" + message);
-      try {
-        JSONObject jo = new JSONObject(message);
-        HubInvocationMessage him = new HubInvocationMessage(jo);
-        String eventName = him.getArgs().getString(0);
-        //解析传回的数据
-        if ("DeviceLogin".equals(eventName)) {
-          JSONObject data = him.getArgs().getJSONObject(1);
-          if (data.getInt("error_code") == 0) {
-            String token = data.getJSONObject("data").getString("access_token");
-            ZhijiaPreferenceUtil.setAccessToken(QRCodeActivity.this, token);
-            Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-          }
-        }
-      } catch (JSONException e) {
-        e.printStackTrace();
+      @Override
+      public void onClick(View view) {
+        startMainActivity();
       }
-    }
+    });
+  }
 
-    @Override
-    public void OnStateChanged(StateBase oldState, StateBase newState) {
-      //第一次连接上
-      if (firstConnection && newState.getState() == ConnectionState.Connected) {
+  private void newme(){
+    HttpUtil.httpPost(QRCodeActivity.this, ZhiJiaUrl.Account, "{}", new Callback() {
+      @Override
+      public void onFailure(Call call, final IOException e) {
 
-        Bitmap qrBitmap = generateBitmap(deviceID, 400, 400);
-        imageView.setImageBitmap(qrBitmap);
-        qrcodemsg.setText("请使用智家APP扫码登陆");
-
-        List<String> args = new ArrayList<String>(1);
-        args.add(deviceID);
-
-        hub.Invoke("DiscoverPad", args, new HubInvokeCallback() {
-
+        final Handler mainHandler = new Handler(Looper.getMainLooper());
+        mainHandler.post(new Runnable() {
           @Override
-          public void OnResult(boolean succeeded, String response) {
-            Log.i(TAG, "OnResult: " + response);
-          }
-
-          @Override
-          public void OnError(Exception ex) {
-            Log.e(TAG, "OnError: ", ex);
+          public void run() {
+              Toast.makeText(QRCodeActivity.this,
+                "newme请求错误:"+e.getMessage(),
+                Toast.LENGTH_SHORT)
+                .show();
           }
         });
 
+
+        Log.i("kwwl", "onFailure: " + e.getMessage());
+        //logButton.setVisibility(View.VISIBLE);
+        //beginConnect();
       }
 
-      Log.d(TAG, "OnStateChanged=" + oldState.getState() + " -> " + newState.getState());
-    }
-  };
+      @Override
+      public void onResponse(Call call, final Response response) throws IOException {
+        if (response.isSuccessful()) {
+          try {
+            String data = response.body().string();
+            final JSONObject object = new JSONObject(data);
+            if (object.getInt("error_code") != 0) {
+              final Handler mainHandler = new Handler(Looper.getMainLooper());
+              mainHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                  try {
+                    Toast.makeText(QRCodeActivity.this,
+                      object.getString("error_message"),
+                      Toast.LENGTH_SHORT)
+                      .show();
+                  } catch (JSONException e) {
+                    e.printStackTrace();
+                  }
 
-  /*
-   * hub代理 panderman 2013-10-25
-   */
-  private IHubProxy hub = null;
+                  beginConnect();
+                }
+              });
+            } else {
+              //FamilyUtil.saveFamily(object);
+              final Handler mainHandler = new Handler(Looper.getMainLooper());
+              mainHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                  Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
+                  startActivity(intent);
+                  finish();
+                }
+              });
+            }
+          } catch (IOException e) {
+            e.printStackTrace();
+          } catch (JSONException e) {
+            e.printStackTrace();
+          }
+        }else
+        {
+          final Handler mainHandler = new Handler(Looper.getMainLooper());
+          mainHandler.post(new Runnable() {
+            @Override
+            public void run() {
+              try {
+                Toast.makeText(QRCodeActivity.this,
+                  "newme错误response:"+response.body().string(),
+                  Toast.LENGTH_SHORT)
+                  .show();
+              } catch (IOException e) {
+                e.printStackTrace();
+              }
+            }
+          });
+        }
+      }
+    });
+  }
+
+  private void startMainActivity() {
+    final Handler mainHandler = new Handler(Looper.getMainLooper());
+    mainHandler.post(new Runnable() {
+      @Override
+      public void run() {
+          Toast.makeText(QRCodeActivity.this,
+            "重新连接",
+            Toast.LENGTH_SHORT)
+            .show();
+      }
+    });
+    initConn();
+    //判断本地是否登陆了,没登陆去扫码
+    conn.SetNewState(new DisconnectedState(conn));
+    if ("".equals(ZhijiaPreferenceUtil.getAccessToken(QRCodeActivity.this))) {
+      beginConnect();
+    } else {
+      mainHandler.post(new Runnable() {
+        @Override
+        public void run() {
+          Toast.makeText(QRCodeActivity.this,
+            "开启请求newme",
+            Toast.LENGTH_SHORT)
+            .show();
+        }
+      });
+      newme();
+    }
+
+  }
+
+  private void initConn(){
+    hub = null;
+    conn = new HubConnection(ZhiJiaUrl.HUB_URL, this, new LongPollingTransport()) {
+      @Override
+      public void OnError(Exception exception) {
+        Log.d(TAG, "OnError=" + exception.getMessage());
+      }
+
+      @Override
+      public void OnMessage(String message) {
+        Log.d(TAG, "message=" + message);
+        try {
+          JSONObject jo = new JSONObject(message);
+          HubInvocationMessage him = new HubInvocationMessage(jo);
+          String eventName = him.getArgs().getString(0);
+          //解析传回的数据
+          if ("DeviceLogin".equals(eventName)) {
+            JSONObject data = him.getArgs().getJSONObject(1);
+            if (data.getInt("error_code") == 0) {
+              String token = data.getJSONObject("data").getString("access_token");
+              ZhijiaPreferenceUtil.setAccessToken(QRCodeActivity.this, token);
+              Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
+              startActivity(intent);
+              finish();
+            }
+          }
+        } catch (JSONException e) {
+          e.printStackTrace();
+        }
+      }
+
+      @Override
+      public void OnStateChanged(StateBase oldState, StateBase newState) {
+        //第一次连接上
+        if (firstConnection && newState.getState() == ConnectionState.Connected) {
+
+          Bitmap qrBitmap = generateBitmap(deviceID, 400, 400);
+          imageView.setImageBitmap(qrBitmap);
+          qrcodemsg.setText("请使用智家APP扫码登陆");
+
+          List<String> args = new ArrayList<String>(1);
+          args.add(deviceID);
+
+          hub.Invoke("DiscoverPad", args, new HubInvokeCallback() {
+            @Override
+            public void OnResult(boolean succeeded, String response) {
+              Log.i(TAG, "OnResult: " + response);
+            }
+            @Override
+            public void OnError(Exception ex) {
+              Log.e(TAG, "OnError: ", ex);
+            }
+          });
+        }
+
+        Log.d(TAG, "OnStateChanged=" + oldState.getState() + " -> " + newState.getState());
+      }
+    };
+  }
+
+
 
   /**
    * 开启推送服务 panderman 2013-10-25
    */
   private void beginConnect() {
     try {
-      //conn.getHeaders().put("Authorization","");
-      qrcodemsg.setText("请等待服务器连接");
-      hub = conn.CreateHubProxy("devicehub");
+      if(conn.getCurrentState().getState() == ConnectionState.Disconnected){
+        //已连接
+        qrcodemsg.setText("请等待服务器连接");
+        hub = conn.CreateHubProxy("devicehub");
+      }
     } catch (OperationApplicationException e) {
       e.printStackTrace();
     }

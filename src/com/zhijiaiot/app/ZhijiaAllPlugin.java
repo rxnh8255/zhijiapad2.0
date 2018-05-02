@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
+import android.os.PowerManager;
 import android.util.Log;
 
 import com.baidu.speech.EventListener;
@@ -14,6 +16,12 @@ import com.baidu.tts.client.SpeechError;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.SpeechSynthesizerListener;
 import com.baidu.tts.client.TtsMode;
+import com.pili.pldroid.player.AVOptions;
+import com.pili.pldroid.player.PLMediaPlayer;
+import com.pili.pldroid.player.PLOnCompletionListener;
+import com.pili.pldroid.player.PLOnErrorListener;
+import com.pili.pldroid.player.PLOnPreparedListener;
+import com.pili.pldroid.player.PlayerState;
 import com.zhijiaiot.unit.SystemServiceManager;
 import com.zhijiaiot.unit.ZhijiaPreferenceUtil;
 
@@ -39,6 +47,7 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
   public static final String TAG = "ZhijiaAllPlugin";
   private static CallbackContext mainContext;
   private String permission = Manifest.permission.RECORD_AUDIO;
+  private PLMediaPlayer mMediaPlayer;
   private List<byte[]> duerData;
   private boolean isBeginBaiduASR = false;
   private boolean firstWK = true; //唤醒第一次
@@ -264,16 +273,81 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
     super.initialize(cordova, webView);
 //    Context context = this.cordova.getActivity().getApplicationContext();
 
-//    ApplicationInfo applicationInfo = null;
+//   ApplicationInfo applicationInfo = null;
 //    try {
 //      applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
 //    } catch (PackageManager.NameNotFoundException e) {
 //      e.printStackTrace();
 //    }
+
+    initMediaPlayer();
+
     initFreamwork();
+
+  }
+
+  private void initMediaPlayer(){
+    AVOptions options = new AVOptions();
+    // 解码方式:
+// codec＝AVOptions.MEDIA_CODEC_HW_DECODE，硬解
+// codec=AVOptions.MEDIA_CODEC_SW_DECODE, 软解
+// codec=AVOptions.MEDIA_CODEC_AUTO, 硬解优先，失败后自动切换到软解
+// 默认值是：MEDIA_CODEC_SW_DECODE
+    options.setInteger(AVOptions.KEY_MEDIACODEC, AVOptions.MEDIA_CODEC_SW_DECODE);
+    // 若设置为 1，则底层会进行一些针对直播流的优化
+    //options.setInteger(AVOptions.KEY_LIVE_STREAMING, 1);
+    // 快开模式，启用后会加快该播放器实例再次打开相同协议的视频流的速度
+    //options.setInteger(AVOptions.KEY_FAST_OPEN, 1);
+
+    options.setInteger(AVOptions.KEY_PREPARE_TIMEOUT, 10 * 1000);
+    options.setInteger(AVOptions.KEY_LOG_LEVEL, 5);
+
+    mMediaPlayer = new PLMediaPlayer(getApplicationContext(),options);
+    mMediaPlayer.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
+    mMediaPlayer.setOnPreparedListener(new PLOnPreparedListener(){
+      @Override
+      public void onPrepared(int i) {
+        mMediaPlayer.start();
+        sendEvent("media","started");
+      }
+    });
+
+    mMediaPlayer.setOnCompletionListener(new PLOnCompletionListener(){
+      @Override
+      public void onCompletion() {
+        sendEvent("media","stoped");
+      }
+    });
+
+    mMediaPlayer.setOnErrorListener(new PLOnErrorListener(){
+
+      @Override
+      public boolean onError(int errorCode) {
+        Log.i(TAG, "onError: "+errorCode);
+        switch (errorCode) {
+          case PLOnErrorListener.ERROR_CODE_IO_ERROR:
+            /**
+             * SDK will do reconnecting automatically
+             */
+            //Utils.showToastTips(PLAudioPlayerActivity.this, "IO Error !");
+            return false;
+          case PLOnErrorListener.ERROR_CODE_OPEN_FAILED:
+            //Utils.showToastTips(PLAudioPlayerActivity.this, "failed to open player !");
+            break;
+          case PLOnErrorListener.ERROR_CODE_SEEK_FAILED:
+            //Utils.showToastTips(PLAudioPlayerActivity.this, "failed to seek !");
+            break;
+          default:
+            //Utils.showToastTips(PLAudioPlayerActivity.this, "unknown error !");
+            break;
+        }
+        return false;
+      }
+    });
 
 
   }
+
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     try {
@@ -289,7 +363,7 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
 
       }else if("start".equals(action)){
         //开始百度识别
-        String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"1000\"}";
+        String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"800\"}";
         asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.OK) );
       }else if("stop".equals(action)){
@@ -304,6 +378,15 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
       }else if("ttsStop".equals(action)){
         mSpeechSynthesizer.stop();
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.OK) );
+      }else if("playAudio".equals(action)){
+        String url = arg_object.getString("url");
+        mMediaPlayer.setDataSource(url);
+        mMediaPlayer.prepareAsync();
+      } else if("stopAudio".equals(action)){
+        if(mMediaPlayer.getPlayerState() == PlayerState.PLAYING)
+        {
+          mMediaPlayer.stop();
+        }
       }
       else{
         callbackContext.error("Invalid action");
@@ -341,6 +424,15 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
     CallbackContext pushCallback = getCurrentCallbackContext();
     if (pushCallback != null) {
       pushCallback.sendPluginResult(pluginResult);
+    }
+  }
+
+  @Override
+  public void onDestroy() {
+    super.onDestroy();
+    if(mMediaPlayer != null) {
+      mMediaPlayer.release();
+      mMediaPlayer = null;
     }
   }
 }

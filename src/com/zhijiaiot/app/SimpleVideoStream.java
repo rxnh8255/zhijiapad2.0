@@ -15,8 +15,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.MediaController;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
@@ -31,10 +29,12 @@ public class SimpleVideoStream extends Activity implements
   private String mVideoUrl;
   private Boolean mShouldAutoClose = true;
   private ImageButton fabButton =null;
-
+  public static SimpleVideoStream instance = null;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    instance = this;
     this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
     setContentView(R.layout.activity_simple_video_stream);
@@ -69,6 +69,12 @@ public class SimpleVideoStream extends Activity implements
     RelativeLayout relLayout =  findViewById(R.id.myvideo);
     relLayout.setBackgroundColor(Color.BLACK);
 
+    relLayout.setOnClickListener(new View.OnClickListener(){
+      @Override
+      public void onClick(View view) {
+        wrapItUp(RESULT_OK,"nowake");
+      }
+    });
     RelativeLayout.LayoutParams relLayoutParam = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
     relLayoutParam.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
     mVideoView = new VideoView(this);

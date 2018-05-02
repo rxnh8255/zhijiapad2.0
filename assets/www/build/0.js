@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(320);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -139,6 +139,38 @@ var DeviceConst = /** @class */ (function () {
     });
     Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S13", {
         get: function () { return "rf_powerswitch_s13"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S31", {
+        //433单火
+        get: function () { return "rf_powerswitch_s31"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S32", {
+        get: function () { return "rf_powerswitch_s32"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S33", {
+        get: function () { return "rf_powerswitch_s33"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S41", {
+        //RF433单火
+        get: function () { return "rf_powerswitch_s41"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S42", {
+        get: function () { return "rf_powerswitch_s42"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S43", {
+        get: function () { return "rf_powerswitch_s43"; },
         enumerable: true,
         configurable: true
     });
@@ -2336,8 +2368,8 @@ var ColorPickerComponentModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TextDirective; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SliderDirective; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__color_picker_service__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__color_picker_service__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes__ = __webpack_require__(216);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3210,7 +3242,7 @@ var SliderDirective = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtendedOutlet; });
 /* unused harmony export outlet_status */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3536,13 +3568,13 @@ var outlet_status = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return outlet_status; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_channel_channel__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_localdata_localdata__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_service__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_service__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4178,6 +4210,8 @@ var SwitchComponent = /** @class */ (function () {
                     break;
                 }
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S11:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S31:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S41:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N11:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_S11:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N11:
@@ -4201,6 +4235,8 @@ var SwitchComponent = /** @class */ (function () {
                     break;
                 }
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S12:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S32:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S42:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N12:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_S12:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N12:
@@ -4228,6 +4264,8 @@ var SwitchComponent = /** @class */ (function () {
                     break;
                 }
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S13:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S33:
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S43:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N13:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_S13:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N13:
@@ -4435,13 +4473,13 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_login_login__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_externalinterface_externalinterface__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_scene_scene__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_externalinterface_externalinterface__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_scene_scene__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_usercenter_usercenter__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_usercenter_usercenter__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4493,6 +4531,7 @@ var HomePage = /** @class */ (function () {
         this.PlaySceneState = true;
         this.PlayTTSState = true;
         this.playVolume = 50;
+        this.screenTime = 120;
         this.PlayStyle = "bofang";
         this.isyanshi = false;
         //空气检测仪
@@ -4519,23 +4558,34 @@ var HomePage = /** @class */ (function () {
         var _this = this;
         clearTimeout(this.videoTimeout);
         var homeThis = this;
+        console.log("屏保时间:" + this.screenTime);
         this.videoTimeout = setTimeout(function () {
-            var options = {
-                successCallback: function () {
-                    console.log("体验开始");
-                    homeThis.sceneService.ExcuteScene("体验", _this.ls.getFamilyId()).subscribe(function (result) {
-                        console.log(result);
-                    });
-                    homeThis.setvideoTimeOut();
-                },
-                errorCallback: function (e) {
-                    console.log("体验结束错误erer" + e);
-                    homeThis.setvideoTimeOut();
-                },
-                orientation: 'landscape'
-            };
-            _this.streamingMedia.playVideo('/s', options);
-        }, 120000);
+            if (_this.ls.getScreenShow() && _this.screenTime > 0) {
+                var options = {
+                    successCallback: function (data) {
+                        if (data == "nowake") {
+                            console.log("不管");
+                        }
+                        else {
+                            console.log("体验开始");
+                            homeThis.sceneService.ExcuteScene("体验", _this.ls.getFamilyId()).subscribe(function (result) {
+                                console.log(result);
+                            });
+                        }
+                        homeThis.setvideoTimeOut();
+                    },
+                    errorCallback: function (e) {
+                        console.log("体验结束错误erer" + e);
+                        homeThis.setvideoTimeOut();
+                    },
+                    orientation: 'landscape'
+                };
+                _this.streamingMedia.playVideo('/s', options);
+            }
+            else {
+                homeThis.setvideoTimeOut();
+            }
+        }, this.screenTime == 0 ? 1000 : this.screenTime * 1000);
     };
     //20170215
     //家房间设备所有信息  //家与房间的变化要更新
@@ -4621,15 +4671,20 @@ var HomePage = /** @class */ (function () {
                     //   this.hotelLogo = this._sanitizer.bypassSecurityTrustStyle(`url(${"assets/img/logo.png"})`);
                     // }
                     console.log(family);
+                    var timestamp = new Date().getTime();
                     if (family.padInfo.device_pad.backgroud != undefined) {
                         console.log(family.padInfo.device_pad.backgroud);
-                        this.hotelBg = this._sanitizer.bypassSecurityTrustStyle("url(" + ("http://iot.image.alimmdn.com/upload/" + family.padInfo.device_pad.backgroud) + ")");
+                        this.hotelBg = this._sanitizer.bypassSecurityTrustStyle("url(" + ("http://iot.image.alimmdn.com/upload/" + family.padInfo.device_pad.backgroud + "?t=" + timestamp) + ")");
                     }
                     if (family.padInfo.device_pad.logo != undefined) {
-                        this.hotelLogo = this._sanitizer.bypassSecurityTrustStyle("url(" + ("http://iot.image.alimmdn.com/upload/" + family.padInfo.device_pad.logo) + ")");
+                        this.hotelLogo = this._sanitizer.bypassSecurityTrustStyle("url(" + ("http://iot.image.alimmdn.com/upload/" + family.padInfo.device_pad.logo + "?t=" + timestamp) + ")");
                     }
                     if (family.padInfo.device_pad.theme != undefined) {
                         this.hotelStyle = family.padInfo.device_pad.theme;
+                    }
+                    console.log("pad屏保时间:" + family.padInfo.device_pad.screensaver_time);
+                    if (family.padInfo.device_pad.screensaver_time != undefined) {
+                        this.screenTime = family.padInfo.device_pad.screensaver_time;
                     }
                     if (family.padInfo.device_pad.enable_qr != undefined && family.padInfo.device_pad.enable_qr) {
                         this.GetShareInfo();
@@ -5163,6 +5218,12 @@ var ShebeiComponent = /** @class */ (function () {
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S11:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S12:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S13:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S31:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S32:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S33:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S41:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S42:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S43:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N11:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N12:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_POWERSWITCH_N13:
@@ -5324,8 +5385,8 @@ var WifideviceComponentModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extended_extendedurlimg__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extended_extendedurlimg__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_channel_channel__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6169,7 +6230,7 @@ var DoorlockComponentModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoorlockComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_channel_channel__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -6325,7 +6386,7 @@ var DemonstrationComponentModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemonstrationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extended_extendedurlimg__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_demoprovider_demoprovider__ = __webpack_require__(220);
@@ -6696,7 +6757,7 @@ var AirdetectorComponentModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AirdetectorComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extended_extendedurlimg__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_channel_channel__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
