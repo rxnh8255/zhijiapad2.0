@@ -77,7 +77,7 @@ var TabsPage = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Tabs */])
     ], TabsPage.prototype, "tabs", void 0);
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app\app\src\pages\tabs\tabs.html"*/'<ion-tabs #mainTabs  class="tabs-nav-bottom" tabsHighlight="false" no-shadow>\n    <ion-tab [root]="tab1Root" tabUrlPath="tab_1" tabTitle="设备" tabIcon="tab-tab1"></ion-tab>\n    <ion-tab [root]="tab2Root" tabUrlPath="tab_2" tabTitle="情景" tabIcon="tab-tab2"></ion-tab>\n    <ion-tab [root]="tab3Root" tabUrlPath="tab_3" tabTitle="智能" tabIcon="tab-tab3"></ion-tab>\n    <ion-tab [root]="tab4Root" tabUrlPath="tab_4" tabTitle="我的" tabIcon="tab-tab5"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app\app\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app_duer\app\src\pages\tabs\tabs.html"*/'<ion-tabs #mainTabs  class="tabs-nav-bottom" tabsHighlight="false" no-shadow>\n    <ion-tab [root]="tab1Root" tabUrlPath="tab_1" tabTitle="设备" tabIcon="tab-tab1"></ion-tab>\n    <ion-tab [root]="tab2Root" tabUrlPath="tab_2" tabTitle="情景" tabIcon="tab-tab2"></ion-tab>\n    <ion-tab [root]="tab3Root" tabUrlPath="tab_3" tabTitle="智能" tabIcon="tab-tab3"></ion-tab>\n    <ion-tab [root]="tab4Root" tabUrlPath="tab_4" tabTitle="我的" tabIcon="tab-tab5"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app_duer\app\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);

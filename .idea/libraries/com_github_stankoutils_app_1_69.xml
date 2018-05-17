@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.stankoutils:app-1.69">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.stankoutils/app/1.69/res" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.stankoutils/app/1.69/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.stankoutils/app/1.69/39a2cc8aca43e09a8d4f8ece07a2d26092659393/app-1.69-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

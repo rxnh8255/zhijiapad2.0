@@ -608,11 +608,11 @@ var map = {
 		0
 	],
 	"../pages/login/login.module": [
-		309,
+		308,
 		5
 	],
 	"../pages/sueimiang/sueimiang.module": [
-		308,
+		309,
 		4
 	],
 	"../pages/switchlight/switchlight.module": [
@@ -1043,6 +1043,10 @@ var EquipmentProvider = /** @class */ (function () {
     EquipmentProvider.prototype.PadFamily = function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + "/api/Family/GetPadFamily";
         return this.http.post(url, {}).map(this.extractData);
+    };
+    EquipmentProvider.prototype.PadFaceRecognition = function (userName) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + '/api/device/Pad_face_recognition';
+        return this.http.post(url, { username: userName }).map(this.extractData);
     };
     EquipmentProvider.prototype.FindByIdDevice = function (device_ids) {
         var url = __WEBPACK_IMPORTED_MODULE_2__constants_constants__["a" /* CONFIGURATION */].baseUrls.server + '/api/device/findbyiddevice';
@@ -2788,8 +2792,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../components/selectanfang/selectanfang.module#SelectanfangModule', name: 'selectanfang', segment: 'selectanfang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchlight/switchlight.module#SwitchlightPageModule', name: 'SwitchlightPage', segment: 'switchlight', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchrfwy/switchrfwy.module#SwitchrfwyPageModule', name: 'SwitchrfwyPage', segment: 'switchrfwy', priority: 'low', defaultHistory: [] }
@@ -3234,6 +3238,9 @@ var MyApp = /** @class */ (function () {
                                 else if (res.type === "nlp") {
                                     var nlpWord_1 = res.message;
                                     console.log(nlpWord_1);
+                                    if (__this.AIUITalkList.length > 9) {
+                                        __this.AIUITalkList = [];
+                                    }
                                     if (nlpWord_1 === "no") {
                                         __this.ngZone.run(function () {
                                             __this.ShouAIUIStatue = false;
@@ -3246,11 +3253,19 @@ var MyApp = /** @class */ (function () {
                                             __this.AIUITalkList.push({ isSelf: true, text: nlpWord_1 });
                                         });
                                         __this.loginService.InvokeBaidu(nlpWord_1, "").subscribe(function (invokeAiData) {
-                                            console.log(invokeAiData);
-                                            __this.ngZone.run(function () {
-                                                __this.AIUITalkList.push({ isSelf: false, text: invokeAiData.data.output.say });
-                                            });
-                                            __this.playShortTTS(invokeAiData.data.output.say);
+                                            console.log("提交给unit的", invokeAiData);
+                                            if (!invokeAiData.data.satisfy) {
+                                                __this.ngZone.run(function () {
+                                                    __this.AIUITalkList.push({ isSelf: false, text: "DuerOS为您服务" });
+                                                });
+                                                zhijiaPlugin.duerBegin();
+                                            }
+                                            else {
+                                                __this.ngZone.run(function () {
+                                                    __this.AIUITalkList.push({ isSelf: false, text: invokeAiData.data.output.say });
+                                                });
+                                                __this.playShortTTS(invokeAiData.data.output.say);
+                                            }
                                         });
                                     }
                                 }
@@ -3476,7 +3491,14 @@ var MyApp = /** @class */ (function () {
         var url = this.PlayMp3List[this.CurrentIndex];
         console.log(url);
         if (url !== undefined) {
-            var extent = url.substring(url.lastIndexOf("."));
+            var extent = "";
+            if (url.indexOf("?") != -1) {
+                var nourl = url.split("?")[0];
+                extent = nourl.substring(nourl.lastIndexOf("."));
+            }
+            else {
+                extent = url.substring(url.lastIndexOf("."));
+            }
             if (extent === ".m3u8") {
                 zhijiaPlugin.playAudio(url);
             }
@@ -3793,7 +3815,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
     ], MyApp.prototype, "popoverContent", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app\app\src\app\app.html"*/'<ion-menu [content]="menuContent" side="right">\n\n    <ion-header no-shadow>\n\n        <ion-navbar transparent no-border-bottom class="toolbar-color-white">\n\n            <ion-title></ion-title>\n\n        </ion-navbar>\n\n    </ion-header>\n\n    <ion-content class="fixedcontent ion-content-switch">\n\n        <div class="voice-wrap">\n\n            <div class="voice-content-bg">\n\n            </div>\n\n            <div class="d-flex flex-column voice-content">\n\n                <div class="voice-top flex-1">\n\n                    <!-- 对话记录 -->\n\n                    <!-- <ion-scroll #scroll scrollY="true" *ngIf="AIUITalkList.length>0"> -->\n\n                        <div *ngFor="let talk of AIUITalkList">\n\n                            <div class="voice-msg-item  justify-content-end voice-msg-right" *ngIf="talk.isSelf">\n\n                                <div class="voice-msg-content ">\n\n                                    {{talk.text}}\n\n                                </div>\n\n                                <h3 class="user_bg">\n\n                                    <img src="assets/img/logo_vertical.png" />\n\n                                </h3>\n\n                            </div>\n\n                            <div class="voice-msg-item  justify-content-start voice-msg-left" *ngIf="!talk.isSelf">\n\n                                <h3>\n\n                                    <img src="assets/img/jiqiren_small.png" />\n\n                                </h3>\n\n                                <div class="voice-msg-content">\n\n                                    {{talk.text}}\n\n                                </div>\n\n                            </div>\n\n                        </div>\n\n                    <!-- </ion-scroll> -->\n\n                    <!-- 默认举例 -->\n\n                    <div class="voice-exp flex-column align-items-center" *ngIf="AIUITalkList.length===0">\n\n                        <h1>你可以这样说：</h1>\n\n                        <p>打开空调.</p>\n\n                        <p>打开灯.</p>\n\n                    </div>\n\n                </div>\n\n                <div class="voice-bottom">\n\n                    <ion-grid>\n\n                        <!-- 默认话筒效果 -->\n\n                        <ion-row *ngIf="!ShouAIUIStatue">\n\n                            <ion-col>\n\n                                <div class="MIC">\n\n                                    <div class="dot" (click)="AIUIBegin()">\n\n                                        <ion-icon name="mic"></ion-icon>\n\n                                    </div>\n\n                                    <div class="pulse"></div>\n\n                                    <div class="pulse1"></div>\n\n                                </div>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <!-- 正在说话的时候效果 -->\n\n                        <ion-row *ngIf="ShouAIUIStatue">\n\n                            <ion-col>\n\n                                <div class="text-center">\n\n                                    <button ion-button (click)="AIUIStop()" class="button-MIC-pause">\n\n                                        我说完了\n\n                                    </button>\n\n                                </div>\n\n                                <div id="colorfulPulse" class="d-flex justify-content-center  align-items-center">\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item-1"></span>\n\n                                    <span class="item-2"></span>\n\n                                    <span class="item-3"></span>\n\n                                    <span class="item-4"></span>\n\n                                    <span class="item-5"></span>\n\n                                    <span class="item-6"></span>\n\n                                    <span class="item-7"></span>\n\n                                    <span class="item-8"></span>\n\n                                    <span class="item-9"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                </div>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-grid>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n</ion-menu>\n\n<ion-nav #myNav [root]="rootPage" #menuContent></ion-nav>'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app\app\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app_duer\app\src\app\app.html"*/'<ion-menu [content]="menuContent" side="right">\n\n    <ion-header no-shadow>\n\n        <ion-navbar transparent no-border-bottom class="toolbar-color-white">\n\n            <ion-title></ion-title>\n\n        </ion-navbar>\n\n    </ion-header>\n\n    <ion-content class="fixedcontent ion-content-switch">\n\n        <div class="voice-wrap">\n\n            <div class="voice-content-bg">\n\n            </div>\n\n            <div class="d-flex flex-column voice-content">\n\n                <div class="voice-top flex-1">\n\n                    <!-- 对话记录 -->\n\n                    <!-- <ion-scroll #scroll scrollY="true" *ngIf="AIUITalkList.length>0"> -->\n\n                        <div *ngFor="let talk of AIUITalkList">\n\n                            <div class="voice-msg-item  justify-content-end voice-msg-right" *ngIf="talk.isSelf">\n\n                                <div class="voice-msg-content ">\n\n                                    {{talk.text}}\n\n                                </div>\n\n                                <h3 class="user_bg">\n\n                                    <img src="assets/img/logo_vertical.png" />\n\n                                </h3>\n\n                            </div>\n\n                            <div class="voice-msg-item  justify-content-start voice-msg-left" *ngIf="!talk.isSelf">\n\n                                <h3>\n\n                                    <img src="assets/img/jiqiren_small.png" />\n\n                                </h3>\n\n                                <div class="voice-msg-content">\n\n                                    {{talk.text}}\n\n                                </div>\n\n                            </div>\n\n                        </div>\n\n                    <!-- </ion-scroll> -->\n\n                    <!-- 默认举例 -->\n\n                    <div class="voice-exp flex-column align-items-center" *ngIf="AIUITalkList.length===0">\n\n                        <h1>你可以这样说：</h1>\n\n                        <p>打开空调.</p>\n\n                        <p>打开灯.</p>\n\n                    </div>\n\n                </div>\n\n                <div class="voice-bottom">\n\n                    <ion-grid>\n\n                        <!-- 默认话筒效果 -->\n\n                        <ion-row *ngIf="!ShouAIUIStatue">\n\n                            <ion-col>\n\n                                <div class="MIC">\n\n                                    <div class="dot" (click)="AIUIBegin()">\n\n                                        <ion-icon name="mic"></ion-icon>\n\n                                    </div>\n\n                                    <div class="pulse"></div>\n\n                                    <div class="pulse1"></div>\n\n                                </div>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <!-- 正在说话的时候效果 -->\n\n                        <ion-row *ngIf="ShouAIUIStatue">\n\n                            <ion-col>\n\n                                <div class="text-center">\n\n                                    <button ion-button (click)="AIUIStop()" class="button-MIC-pause">\n\n                                        我说完了\n\n                                    </button>\n\n                                </div>\n\n                                <div id="colorfulPulse" class="d-flex justify-content-center  align-items-center">\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item-1"></span>\n\n                                    <span class="item-2"></span>\n\n                                    <span class="item-3"></span>\n\n                                    <span class="item-4"></span>\n\n                                    <span class="item-5"></span>\n\n                                    <span class="item-6"></span>\n\n                                    <span class="item-7"></span>\n\n                                    <span class="item-8"></span>\n\n                                    <span class="item-9"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                    <span class="item"></span>\n\n                                </div>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-grid>\n\n                </div>\n\n            </div>\n\n        </div>\n\n    </ion-content>\n\n</ion-menu>\n\n<ion-nav #myNav [root]="rootPage" #menuContent></ion-nav>'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app_duer\app\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],

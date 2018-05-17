@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.erizet.signala:signala-0.20">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.erizet.signala/signala/0.20/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.erizet.signala/signala/0.20/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.erizet.signala/signala/0.20/1b0f0f2ddc87991ec1213d0b7d4e9d389a742d6a/signala-0.20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 308:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SueimiangPageModule", function() { return SueimiangPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sueimiang__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sueimiang__ = __webpack_require__(339);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var SueimiangPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 338:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77,7 +77,7 @@ var SueimiangPage = /** @class */ (function () {
     };
     SueimiangPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-sueimiang',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app\app\src\pages\sueimiang\sueimiang.html"*/'<ion-header no-shadow>\n\n  <ion-navbar transparent no-border-bottom class="toolbar-color-white">\n\n      <ion-title></ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="fixedcontent">\n\n    <iframe id="iframe" style="height:100%;width:100%; border:0;"\n\n    sandbox="allow-scripts allow-top-navigation allow-pointer-lock allow-same-origin allow-popups allow-forms"\n\n    [src]="shuimianUrl">\n\n</iframe>\n\n  <!-- <iframe data-tap-disabled="true" style="height:100%;width:100%;" ng-src="http://zhijiaiot.com/sleep/index.html"></iframe>   -->\n\n</ion-content>\n\n'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app\app\src\pages\sueimiang\sueimiang.html"*/,
+            selector: 'page-sueimiang',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app_duer\app\src\pages\sueimiang\sueimiang.html"*/'<ion-header no-shadow>\n\n  <ion-navbar transparent no-border-bottom class="toolbar-color-white">\n\n      <ion-title></ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="fixedcontent">\n\n    <iframe id="iframe" style="height:100%;width:100%; border:0;"\n\n    sandbox="allow-scripts allow-top-navigation allow-pointer-lock allow-same-origin allow-popups allow-forms"\n\n    [src]="shuimianUrl">\n\n</iframe>\n\n  <!-- <iframe data-tap-disabled="true" style="height:100%;width:100%;" ng-src="http://zhijiaiot.com/sleep/index.html"></iframe>   -->\n\n</ion-content>\n\n'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app_duer\app\src\pages\sueimiang\sueimiang.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */],

@@ -104,4 +104,7 @@
     <feature name="StreamingMedia">
         <param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
     </feature>
+    <feature name="FaceRecognition">
+        <param name="android-package" value="com.zhijiaiot.plugins.facerecognition.FaceRecognition" />
+    </feature>
 </widget>

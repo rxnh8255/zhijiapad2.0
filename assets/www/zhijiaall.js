@@ -23,4 +23,7 @@ ZhijiaPlugin.prototype.stopAudio = function(success, fail) {
 ZhijiaPlugin.prototype.ttsStop = function(success, fail) {
 	return cordova.exec(success, fail, "ZhijiaAllPlugin", "ttsStop", [{}]);
 };
+ZhijiaPlugin.prototype.duerBegin = function(success, fail) {
+	return cordova.exec(success, fail, "ZhijiaAllPlugin", "duerBegin", [{}]);
+};
 window.zhijiaPlugin = new ZhijiaPlugin();

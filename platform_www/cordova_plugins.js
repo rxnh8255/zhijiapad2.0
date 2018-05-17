@@ -342,6 +342,14 @@ module.exports = [
     "clobbers": [
       "streamingMedia"
     ]
+  },
+  {
+    "id": "cordova-plugin-facedetection.FaceRecognition",
+    "file": "plugins/cordova-plugin-facedetection/www/facerecognition.js",
+    "pluginId": "cordova-plugin-facedetection",
+    "clobbers": [
+      "cordova.plugins.facerecognition"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -368,7 +376,8 @@ module.exports.metadata =
   "ionic-plugin-keyboard": "2.2.1",
   "cordova-plugin-app-update": "1.5.4",
   "cordova-plugin-lechange": "1.0.0",
-  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4"
+  "com.hutchind.cordova.plugins.streamingmedia": "0.1.4",
+  "cordova-plugin-facedetection": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

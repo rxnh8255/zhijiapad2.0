@@ -2,16 +2,40 @@ package com.zhijiaiot.app;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.os.PowerManager;
+import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
-import com.baidu.speech.EventListener;
-import com.baidu.speech.EventManager;
-import com.baidu.speech.EventManagerFactory;
-import com.baidu.speech.asr.SpeechConstant;
+import com.baidu.dcs.okhttp3.Call;
+import com.baidu.dcs.okhttp3.Callback;
+import com.baidu.dcs.okhttp3.OkHttpClient;
+import com.baidu.dcs.okhttp3.Request;
+import com.baidu.dcs.okhttp3.Response;
+import com.baidu.duer.dcs.androidapp.BlankVideoPlayActivity;
+import com.baidu.duer.dcs.androidsystemimpl.PlatformFactoryImpl;
+import com.baidu.duer.dcs.devicemodule.screen.ScreenDeviceModule;
+import com.baidu.duer.dcs.devicemodule.screen.extend.card.ScreenExtendDeviceModule;
+import com.baidu.duer.dcs.devicemodule.screen.message.RenderCardPayload;
+import com.baidu.duer.dcs.devicemodule.screen.message.RenderVoiceInputTextPayload;
+import com.baidu.duer.dcs.devicemodule.voiceinput.VoiceInputDeviceModule;
+import com.baidu.duer.dcs.framework.DcsFramework;
+import com.baidu.duer.dcs.framework.DeviceModuleFactory;
+import com.baidu.duer.dcs.framework.IResponseListener;
+import com.baidu.duer.dcs.framework.message.Directive;
+import com.baidu.duer.dcs.http.HttpConfig;
+import com.baidu.duer.dcs.oauth.api.IOauth;
+import com.baidu.duer.dcs.oauth.api.OauthImpl;
+import com.baidu.duer.dcs.systeminterface.IPlatformFactory;
+import com.baidu.duer.dcs.systeminterface.IWakeUp;
+import com.baidu.duer.dcs.util.CommonUtil;
+import com.baidu.duer.dcs.util.LogUtil;
+import com.baidu.duer.dcs.util.NetWorkUtil;
+import com.baidu.duer.dcs.wakeup.WakeUp;
 import com.baidu.tts.client.SpeechError;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.SpeechSynthesizerListener;
@@ -35,6 +59,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,14 +74,14 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
   private static CallbackContext mainContext;
   private String permission = Manifest.permission.RECORD_AUDIO;
   private PLMediaPlayer mMediaPlayer;
-  private List<byte[]> duerData;
-  private boolean isBeginBaiduASR = false;
-  private boolean firstWK = true; //唤醒第一次
+  private DeviceModuleFactory deviceModuleFactory;
+  private IPlatformFactory platformFactory;
+  private DcsFramework dcsFramework;
+  private List<byte[]> duerData = new ArrayList<>();
   private String lastAsr;
-  //百度唤醒
-  private EventManager wp;
-  //百度识别
-  private EventManager asr;
+  private boolean isStopListenReceiving;
+  // 唤醒
+  private WakeUp wakeUp;
   //百度TTS
   SpeechSynthesizer mSpeechSynthesizer;
 
@@ -76,23 +102,14 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
     if (PermissionHelper.hasPermission(this, permission)) {
       Log.i(TAG,"开启唤醒");
 
-//      wakeup = EventManagerFactory.create(getApplicationContext(), "wp");
-//      wakeup.registerListener(wakeupListener);
-//
-//      Map<String, Object> params = new LinkedHashMap<String, Object>();
-//      params.put(com.baidu.speech.asr.SpeechConstant.APP_ID, "10099877");
-//      params.put(com.baidu.speech.asr.SpeechConstant.ACCEPT_AUDIO_VOLUME, false);
-//      params.put(com.baidu.speech.asr.SpeechConstant.WP_WORDS_FILE, "assets:///WakeUp.bin");
-//      String json = null; // 这里可以替换成你需要测试的json
-//      json = new JSONObject(params).toString();
-//      wakeup.send(com.baidu.speech.asr.SpeechConstant.WAKEUP_START, json, null, 0, 0);
+      // init唤醒
+      wakeUp = new WakeUp(platformFactory.getWakeUp(),
+        platformFactory.getAudioRecord());
+      wakeUp.addWakeUpListener(wakeUpListener);
+      // 开始录音，监听是否说了唤醒词
+      wakeUp.startWakeUp();
 
-//      Map<String, Object> params = new HashMap<String, Object>();
-//      params.put(SpeechConstant.WP_WORDS_FILE, "assets:///WakeUp.bin");
-//      params.put(SpeechConstant.ACCEPT_AUDIO_DATA,false);
-//      params.put(SpeechConstant.APP_ID,10099877);
-//      String json = new JSONObject(params).toString();
-//      wp.send(SpeechConstant.WAKEUP_START, json, null, 0, 0);
+      //platformFactory.getVoiceInput().stopRecord();
     } else {
       getMicPermission(0);
     }
@@ -106,114 +123,60 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
   }
 
   private void initFreamwork(){
-    asr = EventManagerFactory.create(getApplicationContext(), "asr"); // this是Activity或其它Context类
-    asr.registerListener( new EventListener() {
-      @Override
-      public void onEvent(String name, final String params, byte[] data, int offset, int length) {
-        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_READY)){
-          Log.i(TAG, "语义解析开始开始: "+params);
 
-          // 引擎就绪，可以说话，一般在收到此事件后通过UI通知用户可以说话了
-        }
-        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)){
-          Log.i(TAG, "语义解析结果: "+params);
-
-          try {
-            final JSONObject jo = new JSONObject(params);
-            String mess = jo.getJSONArray("results_recognition").getString(0);
-            lastAsr = mess;
-
-          } catch (JSONException e) {
-            e.printStackTrace();
-          }
-        }
-        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_FINISH)){
-          // 识别结束
-          Log.i(TAG, "识别结束: "+params);
-
-//          if((params.contains("No recognition result match")||params.contains("VAD detect no speech")) && firstWK){ //输出小智在
-//            firstWK = false;
-//            mSpeechSynthesizer.speak("我在,请说","xz");
-//          }else
-            if(!params.contains("No recognition result match") && !params.contains("VAD detect no speech")){
-
-            sendEvent("nlp",lastAsr);
-            //把最后的结果发给UNIT解析:
-            //UnitInvoke(lastAsr);
-
-          }else{
-              sendEvent("nlp","no");
-            }
-        }
-      }
-    });
-
-    wp = EventManagerFactory.create(getApplicationContext(), "wp");
-    wp.registerListener(new EventListener(){
-
-      @Override
-      public void onEvent(String name, String params, byte[] data, int offset, int length) {
-        if(name.equals(SpeechConstant.CALLBACK_EVENT_WAKEUP_AUDIO)){ //音频数据
-
-          if(isBeginBaiduASR){
-            if(length > 0) {
-              //duerData.add(data);
-            }
-          }
-
-//                if(isStopListenReceiving){ //开始记录
-//                    if(length > 0) {
-//                        //Log.i(TAG, "onEvent: 音频数据:"+length+" 偏移:"+offset);
-//                        platformFactory.getBlockQuque().add(data);
-//                    }
-//                }else if(!isStopListenReceiving){
-//                    //根据dueros停止录音
-//                    asr.send(SpeechConstant.ASR_STOP, "{}", null, 0, 0);
-//                }
-        }
-        if(name.equals(SpeechConstant.CALLBACK_EVENT_WAKEUP_SUCCESS)){ //唤醒成功
-          Log.i(TAG, "唤醒成功: "+params);
-
-          try {
-            JSONObject wkjson = new JSONObject(params);
-            String word = wkjson.getString("word");
-            if("小智小智".equals(word)){
-
-
-              sendEvent("wakeup",wkjson.toString());
-              //deviceModuleFactory.getVoiceInputDeviceModule().stopSpeaker();
-              //把正在播放的暂停了
-
-              firstWK = true;
-              //开始百度识别
-              String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"100\"}";
-              asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
-
-              //duerData.clear();//每次喊小智小智的时候,把data清空
-              isBeginBaiduASR = true;
-              //beginDuerLisning();
-
-            }else if("播放".equals(word)){
-
-
-              //platformFactory.getPlayback().play(playPauseResponseListener);
-              //doUserActivity();
-            }else if("暂停".equals(word)){
-
-
-              //platformFactory.getPlayback().pause(playPauseResponseListener);
-              //doUserActivity();
-            }else if("下一首".equals(word)) {
-              //platformFactory.getPlayback().next(nextPreResponseListener);
-              //doUserActivity();
-            }
-          } catch (JSONException e) {
-            e.printStackTrace();
-          }
-
-        }
-      }
-    });
+//    asr = EventManagerFactory.create(getApplicationContext(), "asr"); // this是Activity或其它Context类
+//    asr.registerListener( new EventListener() {
+//      @Override
+//      public void onEvent(String name, final String params, byte[] data, int offset, int length) {
+//        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_READY)){
+//          Log.i(TAG, "语义解析开始开始: "+params);
+//          duerData.clear();
+//          // 引擎就绪，可以说话，一般在收到此事件后通过UI通知用户可以说话了
+//        }
+//        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_AUDIO)){
+//          if(length > 0) {
+//            duerData.add(data);
+//          }
+//        }
+//        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)){
+//          Log.i(TAG, "语义解析结果: "+params);
+//
+//          try {
+//            final JSONObject jo = new JSONObject(params);
+//            String mess = jo.getJSONArray("results_recognition").getString(0);
+//            lastAsr = mess;
+//
+//          } catch (JSONException e) {
+//            e.printStackTrace();
+//          }
+//        }
+//        if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_FINISH)){
+//          // 识别结束
+//          Log.i(TAG, "识别结束: "+params);
+//
+////          if((params.contains("No recognition result match")||params.contains("VAD detect no speech")) && firstWK){ //输出小智在
+////            firstWK = false;
+////            mSpeechSynthesizer.speak("我在,请说","xz");
+////          }else
+//            if(!params.contains("No recognition result match") && !params.contains("VAD detect no speech")){
+//
+//              for (int i=0;i<duerData.size();i++){
+//                byte[] singedata = duerData.get(i);
+//                platformFactory.getBlockQuque().add(singedata);
+//              }
+//              sendEvent("nlp",lastAsr);
+//              //把最后的结果发给UNIT解析:
+//
+////              if(duerData.size() > 0){
+////                beginDuerLisning();
+////              }
+//
+//          }else{
+//              sendEvent("nlp","no");
+//            }
+//        }
+//      }
+//    });
 
     //初始化TTS
     mSpeechSynthesizer = SpeechSynthesizer.getInstance();
@@ -240,11 +203,6 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
 
         sendEvent("ttsStoped",s);
 
-        //beginDuerLisning();
-//        if("xz".equals(s)){
-//          String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"100\"}";
-//          asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
-//        }
       }
       @Override
       public void onError(String s, SpeechError speechError) {
@@ -265,25 +223,231 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
     mSpeechSynthesizer.setParam(SpeechSynthesizer.PARAM_MIX_MODE, SpeechSynthesizer.MIX_MODE_HIGH_SPEED_NETWORK);
     mSpeechSynthesizer.initTts(TtsMode.ONLINE);
 
+    IOauth baiduOauth = new OauthImpl();
+    HttpConfig.setAccessToken(baiduOauth.getAccessToken());
+
+    platformFactory = new PlatformFactoryImpl(this.getApplicationContext());
+    dcsFramework = new DcsFramework(platformFactory);
+    deviceModuleFactory = dcsFramework.getDeviceModuleFactory();
+    deviceModuleFactory.createVoiceOutputDeviceModule();
+    deviceModuleFactory.createVoiceInputDeviceModule(); //分析录音1
+    deviceModuleFactory.createAlertsDeviceModule();
+
+    deviceModuleFactory.createAudioPlayerDeviceModule();
+    deviceModuleFactory.createSystemDeviceModule();
+    deviceModuleFactory.createSpeakControllerDeviceModule();
+    deviceModuleFactory.createPlaybackControllerDeviceModule();
+
+    deviceModuleFactory.createScreenDeviceModule();
+
+    deviceModuleFactory.getVoiceInputDeviceModule().addVoiceInputListener(
+      new VoiceInputDeviceModule.IVoiceInputListener() {
+        @Override
+        public void onStartRecord() {
+          LogUtil.d(TAG, "onStartRecord");
+          startRecording();
+        }
+
+        @Override
+        public void onFinishRecord() {
+          LogUtil.d(TAG, "onFinishRecord");
+          stopRecording();
+        }
+
+        @Override
+        public void onSucceed(int statusCode) {
+          LogUtil.d(TAG, "onSucceed-statusCode:" + statusCode);
+          if (statusCode != 200) {
+            stopRecording();
+            Toast.makeText(getApplicationContext(),
+              "语音成功",
+              Toast.LENGTH_SHORT)
+              .show();
+          }
+        }
+
+        @Override
+        public void onFailed(String errorMessage) {
+          LogUtil.d(TAG, "onFailed-errorMessage:" + errorMessage);
+          stopRecording();
+          Toast.makeText(getApplicationContext(),
+            "语音失败",
+            Toast.LENGTH_SHORT)
+            .show();
+        }
+      });
+
+
+    deviceModuleFactory.createScreenExtendDeviceModule();
+    deviceModuleFactory.getScreenExtendDeviceModule().addListener(new ScreenExtendDeviceModule.IRenderExtendListener(){
+
+      @Override
+      public void onRenderDirective(Directive directive) {
+        Log.i(TAG, "getScreenExtendDeviceModule: "+directive.rawMessage);
+      }
+    });
+    deviceModuleFactory.getScreenDeviceModule()
+      .addRenderVoiceInputTextListener(new ScreenDeviceModule.IRenderVoiceInputTextListener() {
+        @Override
+        public void onRenderVoiceInputText(RenderVoiceInputTextPayload payload) {
+          Log.i(TAG, "onRenderVoiceInputText: "+payload.text);
+          if(payload.type == RenderVoiceInputTextPayload.Type.FINAL){ //最终结果
+            sendEvent("nlp",payload.text);
+          }
+        }
+
+      });
+
+    deviceModuleFactory.getScreenDeviceModule().addRenderListener(new ScreenDeviceModule.IRenderListener() {
+      @Override
+      public void onRenderDirective(Directive directive) {
+
+        Log.i(TAG, "传回的screen数据: "+directive.rawMessage);
+
+        if(directive.getPayload() instanceof RenderCardPayload){
+          RenderCardPayload rcp =  (RenderCardPayload)directive.getPayload();
+
+          Log.i(TAG, "rcpType: "+rcp.type);
+          if(rcp.type == RenderCardPayload.Type.StandardCard){
+            //rcp.link.url
+            String url = "https://zhijiaiot.com/api/baidu/GetVideoUrl?originalUrl="+rcp.link.url;
+            Log.i(TAG, "播放的url: "+url);
+
+//            OkHttpClient client = new OkHttpClient();
+//            Request request = new Request.Builder().url(url).build();
+//            client.newCall(request).enqueue(new Callback() {
+//              @Override
+//              public void onFailure(Call call, IOException e) {
+//                Log.i("kwwl", "onFailure: "+e.getMessage());
+//              }
+//              @Override
+//              public void onResponse(Call call, Response response) throws IOException {
+//                if(response.isSuccessful()){//回调的方法执行在子线程。
+//                  Log.d("kwwl","获取数据成功了");
+//                  Log.d("kwwl","response.code()=="+response.code());
+//
+//                  String data = response.body().string();
+//                  data = data.replace("\\\"","'");
+//                  if(data.length() > 1) {
+//                    data = data.substring(1, data.length() - 1);
+//                  }
+//                  Log.d("kwwl","response.body().string()=="+data);
+//                  //voiceButton.setText(getResources().getString(R.string.dianshi));
+//                  try {
+//                    Log.i("kwwl", "onResponse: "+data);
+//                    JSONObject object = new JSONObject(data);
+//                    JSONObject listeam =  object.getJSONObject("streams");
+//
+//                    JSONObject streams;
+//                    if(listeam.has("HD")){
+//                      streams = listeam.getJSONObject("HD");
+//                    }else if(listeam.has("TD")){
+//                      streams = listeam.getJSONObject("TD");
+//                    }
+//                    else{
+//                      streams = listeam.getJSONObject("SD");
+//                    }
+//
+//                    final String newUrl = streams.getString("m3u8_url");
+//
+//                    runOnUiThread(new Runnable() {
+//                      @Override
+//                      public void run() {
+//                        Intent intent = new Intent(this.this,BlankVideoPlayActivity.class);
+//                        //采用Intent普通传值的方式
+//                        intent.putExtra("m3u8Url", newUrl);
+//                        //跳转Activity
+//                        startActivityForResult(intent, 1500);
+//
+//
+//                        Toast.makeText(ZhijiaAllPlugin.this,
+//                          "准备播放视频",
+//                          Toast.LENGTH_SHORT)
+//                          .show();
+//                        //已在主线程中，可以更新UI
+//                      }
+//                    });
+//
+//                  }catch (Exception ex){
+//                    Log.i("kwwl",ex.getMessage());
+//                  }
+//
+//                }
+//              }
+//            });
+          }
+        }
+
+      }
+    });
+
     promptForRecord();
   }
 
   @Override
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
-//    Context context = this.cordova.getActivity().getApplicationContext();
-
-//   ApplicationInfo applicationInfo = null;
-//    try {
-//      applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
-//    } catch (PackageManager.NameNotFoundException e) {
-//      e.printStackTrace();
-//    }
-
     initMediaPlayer();
-
     initFreamwork();
+  }
 
+  private void stopRecording() {
+    wakeUp.startWakeUp();
+    isStopListenReceiving = false;
+  }
+
+  private void startRecording() {
+    wakeUp.stopWakeUp();
+    isStopListenReceiving = true;
+    deviceModuleFactory.getSystemProvider().userActivity();
+  }
+
+  private IResponseListener playPauseResponseListener = new IResponseListener() {
+    @Override
+    public void onSucceed(int statusCode) {
+      if (statusCode == 204) {
+      }
+    }
+
+    @Override
+    public void onFailed(String errorMessage) {
+    }
+  };
+  private IWakeUp.IWakeUpListener wakeUpListener = new IWakeUp.IWakeUpListener() {
+    @Override
+    public void onWakeUpSucceed() {
+      Log.i(TAG, "onWakeUpSucceed: 唤醒成功");
+      beginDuer();
+    }
+  };
+
+  private void beginDuer(){
+
+    dcsFramework.listDrective.clear();
+    if (!NetWorkUtil.isNetworkConnected(this.getApplicationContext())) {
+      //重连
+      wakeUp.startWakeUp();
+      return;
+    }
+    if (CommonUtil.isFastDoubleClick()) {
+      return;
+    }
+
+    if (!dcsFramework.getDcsClient().isConnected()) {
+      dcsFramework.getDcsClient().startConnect();
+      return;
+    }
+    if (isStopListenReceiving) {
+      platformFactory.getVoiceInput().stopRecord();
+      isStopListenReceiving = false;
+      return;
+    }
+    isStopListenReceiving = true;
+    platformFactory.getVoiceInput().startRecord();
+    doUserActivity();
+  }
+  private void doUserActivity() {
+    deviceModuleFactory.getSystemProvider().userActivity();
   }
 
   private void initMediaPlayer(){
@@ -363,11 +527,15 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
 
       }else if("start".equals(action)){
         //开始百度识别
-        String json = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"800\"}";
-        asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
+        //String json = "{\"accept-audio-data\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"800\",\"infile\":\"#com.zhijiaiot.app.MicrophoneInputStream.getInstance()\"}";
+//        String json = "{\"accept-audio-data\":false,\"pid\":1536,\"vad.endpoint-timeout\":\"800\",\"accept-audio-data\":\"true\"}";
+//        asr.send(SpeechConstant.ASR_START, json, null, 0, 0);
+
+        beginDuer();
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.OK) );
       }else if("stop".equals(action)){
-        asr.send(SpeechConstant.ASR_STOP,"",null,0,0);
+        platformFactory.getVoiceInput().stopRecord();
+        isStopListenReceiving = false;
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.OK) );
       }
       else if("ttsPlay".equals(action)){
@@ -387,6 +555,12 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
         {
           mMediaPlayer.stop();
         }
+        platformFactory.getPlayback().pause(playPauseResponseListener);
+      }else if("duerBegin".equals(action)){
+        dcsFramework.handleCurrDirective();
+//        if(duerData.size() > 0){
+//          beginDuerLisning();
+//        }
       }
       else{
         callbackContext.error("Invalid action");

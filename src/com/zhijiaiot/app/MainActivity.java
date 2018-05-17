@@ -20,10 +20,21 @@
 package com.zhijiaiot.app;
 
 import android.os.Bundle;
+
+import com.baidu.duer.dcs.androidsystemimpl.PlatformFactoryImpl;
+import com.baidu.duer.dcs.framework.DcsFramework;
+import com.baidu.duer.dcs.framework.DeviceModuleFactory;
+import com.baidu.duer.dcs.http.HttpConfig;
+import com.baidu.duer.dcs.oauth.api.IOauth;
+import com.baidu.duer.dcs.oauth.api.OauthImpl;
+import com.baidu.duer.dcs.systeminterface.IPlatformFactory;
+
 import org.apache.cordova.*;
 
 public class MainActivity extends CordovaActivity
 {
+
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -38,4 +49,10 @@ public class MainActivity extends CordovaActivity
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }
+
+  @Override
+  public void onDestroy() {
+    super.onDestroy();
+
+  }
 }

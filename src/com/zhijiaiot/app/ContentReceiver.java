@@ -15,6 +15,6 @@ public class ContentReceiver extends BroadcastReceiver {
     Intent it=new Intent(context,QRCodeActivity.class);
     //it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     context.startActivity(it);
-    Toast.makeText(context,"我自启动成功了哈",Toast.LENGTH_LONG).show();
+    //Toast.makeText(context,"我自启动成功了哈",Toast.LENGTH_LONG).show();
   }
 }

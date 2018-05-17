@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.duer.dcs.oauth.api.BaiduDialog;
+import com.baidu.duer.dcs.oauth.api.BaiduDialogError;
+import com.baidu.duer.dcs.oauth.api.BaiduException;
+import com.baidu.duer.dcs.oauth.api.BaiduOauthImplicitGrant;
+import com.baidu.duer.dcs.util.LogUtil;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -43,6 +49,7 @@ import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.Response;
 
 public class QRCodeActivity extends Activity {
@@ -52,6 +59,10 @@ public class QRCodeActivity extends Activity {
   ImageView imageView;
   TextView qrcodemsg;
   Button logButton;
+
+  private static final String CLIENT_ID = "DmQ1SD2GISpSHRUhgT49YLu32PMS06DS";
+  public static final MediaType JSON = MediaType.parse("application/json;charset=utf-8");
+  private BaiduOauthImplicitGrant baiduOauthImplicitGrant;
 
   /**
    * hub链接
@@ -76,7 +87,8 @@ public class QRCodeActivity extends Activity {
 
     deviceID = CommonUtil.getDeviceUniqueID();
     qrcodemsg.setText("正在登陆,请稍等");
-    startMainActivity();
+    initLogin();
+    //startMainActivity();
 
     //logButton.setVisibility(View.GONE);
     logButton.setText("刷新");
@@ -85,6 +97,40 @@ public class QRCodeActivity extends Activity {
       @Override
       public void onClick(View view) {
         startMainActivity();
+      }
+    });
+  }
+
+  private void initLogin(){
+    baiduOauthImplicitGrant = new BaiduOauthImplicitGrant(CLIENT_ID, QRCodeActivity.this.getApplication());
+    baiduOauthImplicitGrant.authorize(QRCodeActivity.this, false, false, new BaiduDialog
+      .BaiduDialogListener() {
+      @Override
+      public void onComplete(Bundle values) {
+        Toast.makeText(QRCodeActivity.this.getApplicationContext(),
+          "百度登陆成功",
+          Toast.LENGTH_SHORT).show();
+        startMainActivity();
+      }
+
+      @Override
+      public void onBaiduException(BaiduException e) {
+
+      }
+
+      @Override
+      public void onError(BaiduDialogError e) {
+        if (null != e) {
+          String toastString = TextUtils.isEmpty(e.getMessage())
+            ? "百度登陆错误" : e.getMessage();
+          Toast.makeText(QRCodeActivity.this.getApplicationContext(), toastString,
+            Toast.LENGTH_SHORT).show();
+        }
+      }
+
+      @Override
+      public void onCancel() {
+        LogUtil.d("cancle", "I am back");
       }
     });
   }
@@ -99,9 +145,10 @@ public class QRCodeActivity extends Activity {
           @Override
           public void run() {
               Toast.makeText(QRCodeActivity.this,
-                "newme请求错误:"+e.getMessage(),
+                "验证失败,重新登陆",
                 Toast.LENGTH_SHORT)
                 .show();
+            beginConnect();
           }
         });
 
@@ -189,15 +236,6 @@ public class QRCodeActivity extends Activity {
     if ("".equals(ZhijiaPreferenceUtil.getAccessToken(QRCodeActivity.this))) {
       beginConnect();
     } else {
-      mainHandler.post(new Runnable() {
-        @Override
-        public void run() {
-          Toast.makeText(QRCodeActivity.this,
-            "开启请求newme",
-            Toast.LENGTH_SHORT)
-            .show();
-        }
-      });
       newme();
     }
 

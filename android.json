@@ -83,6 +83,10 @@
             {
               "xml": "<feature name=\"StreamingMedia\"><param name=\"android-package\" value=\"com.hutchind.cordova.plugins.streamingmedia.StreamingMedia\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FaceRecognition\"><param name=\"android-package\" value=\"com.zhijiaiot.plugins.facerecognition.FaceRecognition\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -157,6 +161,10 @@
             {
               "xml": "<activity android:configChanges=\"orientation|screenSize\" android:label=\"Simple Video Stream\" android:name=\"com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream\" />",
               "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTop\" android:name=\"com.zhijiaiot.plugins.facerecognition.ArcFaceDetectActivity\" android:screenOrientation=\"landscape\" android:theme=\"@android:style/Theme.DeviceDefault.NoActionBar\" />",
+              "count": 1
             }
           ],
           "/manifest": [
@@ -189,14 +197,6 @@
               "count": 1
             },
             {
-              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
-              "count": 1
-            },
-            {
               "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
               "count": 1
             },
@@ -206,6 +206,26 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
               "count": 1
             }
           ]
@@ -278,6 +298,9 @@
       "PACKAGE_NAME": "com.zhijiaiot.app"
     },
     "com.hutchind.cordova.plugins.streamingmedia": {
+      "PACKAGE_NAME": "com.zhijiaiot.app"
+    },
+    "cordova-plugin-facedetection": {
       "PACKAGE_NAME": "com.zhijiaiot.app"
     }
   },
@@ -625,6 +648,14 @@
       "clobbers": [
         "streamingMedia"
       ]
+    },
+    {
+      "id": "cordova-plugin-facedetection.FaceRecognition",
+      "file": "plugins/cordova-plugin-facedetection/www/facerecognition.js",
+      "pluginId": "cordova-plugin-facedetection",
+      "clobbers": [
+        "cordova.plugins.facerecognition"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -649,6 +680,7 @@
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-app-update": "1.5.4",
     "cordova-plugin-lechange": "1.0.0",
-    "com.hutchind.cordova.plugins.streamingmedia": "0.1.4"
+    "com.hutchind.cordova.plugins.streamingmedia": "0.1.4",
+    "cordova-plugin-facedetection": "1.0.0"
   }
 }
