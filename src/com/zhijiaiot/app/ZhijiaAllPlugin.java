@@ -394,6 +394,7 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
   private void stopRecording() {
     wakeUp.startWakeUp();
     isStopListenReceiving = false;
+    sendEvent("nlp","no");
   }
 
   private void startRecording() {
@@ -417,13 +418,14 @@ public class ZhijiaAllPlugin extends CordovaPlugin {
     @Override
     public void onWakeUpSucceed() {
       Log.i(TAG, "onWakeUpSucceed: 唤醒成功");
-      beginDuer();
+      sendEvent("wakeup","true");
+      //beginDuer();
     }
   };
 
   private void beginDuer(){
 
-    dcsFramework.listDrective.clear();
+    dcsFramework.blockingDeque.clear();
     if (!NetWorkUtil.isNetworkConnected(this.getApplicationContext())) {
       //重连
       wakeUp.startWakeUp();

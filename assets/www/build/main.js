@@ -616,7 +616,7 @@ var map = {
 		4
 	],
 	"../pages/switchlight/switchlight.module": [
-		311,
+		310,
 		1
 	],
 	"../pages/switchrfwy/switchrfwy.module": [
@@ -624,7 +624,7 @@ var map = {
 		2
 	],
 	"../pages/tabs/tabs.module": [
-		310,
+		311,
 		3
 	]
 };
@@ -2794,8 +2794,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sueimiang/sueimiang.module#SueimiangPageModule', name: 'sueimiang', segment: 'sueimiang', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchlight/switchlight.module#SwitchlightPageModule', name: 'SwitchlightPage', segment: 'switchlight', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tabs', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/switchrfwy/switchrfwy.module#SwitchrfwyPageModule', name: 'SwitchrfwyPage', segment: 'switchrfwy', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -3226,8 +3226,11 @@ var MyApp = /** @class */ (function () {
                                 }
                                 if (res.type === "wakeup") {
                                     var wakeMsg = JSON.parse(res.message);
-                                    console.log(wakeMsg);
+                                    __this.stopall();
                                     __WEBPACK_IMPORTED_MODULE_7__event_eventemitter__["a" /* Emitter */].fire("musicState", "openHomeMenu");
+                                    __this.ShouAIUIStatue = true;
+                                    __this.openedMenu();
+                                    zhijiaPlugin.ttsPlay("我在", "wakeup");
                                 }
                                 else if (res.type === "ttsStoped") {
                                     if (res.message === "wakeup") {
@@ -3244,7 +3247,7 @@ var MyApp = /** @class */ (function () {
                                     if (nlpWord_1 === "no") {
                                         __this.ngZone.run(function () {
                                             __this.ShouAIUIStatue = false;
-                                            __this.AIUITalkList.push({ isSelf: true, text: "没有识别到您的话" });
+                                            //__this.AIUITalkList.push({ isSelf: true, text: "没有识别到您的话"});
                                         });
                                     }
                                     else {

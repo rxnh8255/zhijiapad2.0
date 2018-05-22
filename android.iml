@@ -139,14 +139,12 @@
     <orderEntry type="library" exported="" name="com.github.stankoutils:app-1.69" level="project" />
     <orderEntry type="library" exported="" name="org.apache.commons:commons-lang3:3.5@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.1@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.squareup:otto:1.3.8@jar" level="project" />
     <orderEntry type="library" exported="" name="javazoom:jlayer:1.0.1@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:C.\projects\zhijiatablet\smart_app_duer\app\platforms\android\libs\jackson-mapper-asl-1.9.13.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="com.guo.android_extend:android-extend-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
     <orderEntry type="library" exported="" name="com.android.support.constraint:constraint-layout-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.alibaba:fastjson:1.2.47@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.squareup.okio:okio:1.13.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.beardedhen:androidbootstrap-2.3.2" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:recyclerview-v7-23.0.1" level="project" />
     <orderEntry type="library" exported="" name="lechange:@aar" level="project" />
@@ -154,7 +152,6 @@
     <orderEntry type="library" exported="" name="android.arch.lifecycle:runtime-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="com.jakewharton:butterknife-8.8.0" level="project" />
     <orderEntry type="library" exported="" name="android.arch.lifecycle:common:1.1.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.squareup.okhttp3:okhttp:3.8.0@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:C.\projects\zhijiatablet\smart_app_duer\app\platforms\android\libs\pldroid-player-2.1.3.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="org.reactivestreams:reactive-streams:1.0.2@jar" level="project" />
     <orderEntry type="library" exported="" name="com.jakewharton:butterknife-annotations:8.8.0@jar" level="project" />
@@ -169,6 +166,7 @@
     <orderEntry type="library" exported="" name="io.netty:netty-all:4.1.5.Final@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:C.\projects\zhijiatablet\smart_app_duer\app\platforms\android\libs\com.baidu.tts_2.3.1.20170808_e39ea89.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-media-compat-27.1.0" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:C.\projects\zhijiatablet\smart_app_duer\app\platforms\android\libs\okio-1.14.0.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:C.\projects\zhijiatablet\smart_app_duer\app\platforms\android\libs\core-3.2.1.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-fragment-27.1.0" level="project" />
     <orderEntry type="library" exported="" name="io.reactivex.rxjava2:rxjava:2.1.14-RC1@jar" level="project" />

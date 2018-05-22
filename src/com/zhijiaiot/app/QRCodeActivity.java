@@ -15,6 +15,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.dcs.okhttp3.Call;
+import com.baidu.dcs.okhttp3.Callback;
+import com.baidu.dcs.okhttp3.MediaType;
+import com.baidu.dcs.okhttp3.Response;
 import com.baidu.duer.dcs.oauth.api.BaiduDialog;
 import com.baidu.duer.dcs.oauth.api.BaiduDialogError;
 import com.baidu.duer.dcs.oauth.api.BaiduException;
@@ -47,10 +51,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.Response;
 
 public class QRCodeActivity extends Activity {
 

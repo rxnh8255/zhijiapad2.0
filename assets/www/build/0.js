@@ -4558,7 +4558,7 @@ var HomePage = /** @class */ (function () {
         var _this = this;
         clearTimeout(this.videoTimeout);
         var homeThis = this;
-        console.log("屏保时间:" + this.screenTime);
+        //console.log("屏保时间:"+this.screenTime);
         this.videoTimeout = setTimeout(function () {
             if (_this.ls.getScreenShow() && _this.screenTime > 0) {
                 var options = {
