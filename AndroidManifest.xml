@@ -28,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </receiver>
-        <service android:exported="false" android:name="com.baidu.speech.VoiceRecognitionService" />
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name=".MainActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize" />
         <provider android:authorities="${applicationId}.opener.provider" android:exported="false" android:grantUriPermissions="true" android:name="io.github.pwlin.cordova.plugins.fileopener2.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/opener_paths" />

@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 307:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(322);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -202,8 +202,13 @@ var DeviceConst = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(DeviceConst, "CURTAIN", {
+    Object.defineProperty(DeviceConst, "CURTAIN_RF_01", {
         //智能窗帘电机
+        get: function () { return "curtain_rf_01"; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DeviceConst, "CURTAIN", {
         get: function () { return "curtain"; },
         enumerable: true,
         configurable: true
@@ -3242,7 +3247,7 @@ var SliderDirective = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtendedOutlet; });
 /* unused harmony export outlet_status */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3571,7 +3576,7 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_channel_channel__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_service__ = __webpack_require__(215);
@@ -4463,7 +4468,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 319:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4477,7 +4482,7 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_scene_scene__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_usercenter_usercenter__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -5116,20 +5121,20 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 320:
+/***/ 322:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShebeiComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(338);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5174,7 +5179,7 @@ var ShebeiComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 321:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5214,6 +5219,7 @@ var ShebeiComponent = /** @class */ (function () {
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].WF_CIRCLE_OUTLET:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_GATEWAY:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN_RF_01:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].Airradio_A1: //空气电台
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].Airradio_A2:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].Airradio_A2se:
@@ -5345,15 +5351,15 @@ var ShebeiComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 322:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WifideviceComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(326);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5389,7 +5395,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 323:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5399,7 +5405,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extended_extendedurlimg__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_channel_channel__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5443,6 +5449,7 @@ var WifideviceComponent = /** @class */ (function () {
         this.stattype = false; //按钮不能一直点
         //wifi窗帘
         this.wificurtain = __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN;
+        this.wificurtain_01 = __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN_RF_01;
         this.buttonstatus1 = "in-open";
         this.buttonstatus2 = "in-stop";
         this.buttonstatus3 = "in-close";
@@ -5587,6 +5594,7 @@ var WifideviceComponent = /** @class */ (function () {
                     }
                 }
                 break;
+            case __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN_RF_01:
             case __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__["a" /* DeviceConst */].CURTAIN://wifi窗帘
                 {
                     // this.brightness = this.oldbrightness;
@@ -5750,7 +5758,7 @@ var WifideviceComponent = /** @class */ (function () {
     ], WifideviceComponent.prototype, "device", null);
     WifideviceComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'wifidevice-device',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app_duer\app\src\components\wifidevice\wifidevice.html"*/'<div class="ipad-switch" *ngIf="devicetype===wificurtain">\n\n  <ion-row center>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain active" (click)="click1();"></button>\n\n        <p>关闭</p>\n\n      </ion-col>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain" (click)="click3();"></button>\n\n        <p>开启</p>\n\n      </ion-col>\n\n  </ion-row>\n\n  <ion-row class="ion-row-padding">\n\n    <ion-col col-6 text-left>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-6 text-right>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-12 >\n\n      <ion-range min="0" max="100" [(ngModel)]="brightness" (ionChange)="change($event)" pin="true" debounce="1000" class="ipad-range-small">\n\n      </ion-range>\n\n    </ion-col>\n\n    <ion-col col-12 text-center>\n\n      <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<div class="ipad-switch" *ngIf="devicetype===wifioutlet">\n\n  <ion-row center class="ion-row-full align-items-center">\n\n    <ion-col text-center>\n\n        <button *ngIf="checked" color="bright" outline ion-button icon-only class="ipad-button-socket" (click)="clickvalue()"></button>\n\n        <button *ngIf="!checked" color="bright" outline ion-button icon-only class="ipad-button-socket active" (click)="clickvalue()"></button>\n\n        <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<!-- <div class="ipad-switch">\n\n    <ion-row center>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain"></button>\n\n            <p>开启</p>\n\n        </ion-col>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain active"></button>\n\n            <p>关闭</p>\n\n        </ion-col>\n\n    </ion-row>\n\n    <ion-row class="ion-row-padding">\n\n        <ion-col col-6 text-left>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-6 text-right>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n        </ion-col>\n\n        <ion-col>\n\n            <ion-range class="ipad-range-small" [(ngModel)]="brightness">\n\n            </ion-range>\n\n        </ion-col>\n\n        <ion-col col-12 text-center>\n\n            <p>客厅窗帘</p>\n\n        </ion-col>\n\n    </ion-row>\n\n</div> -->\n\n\n\n<!-- <ion-item  *ngIf="type===0">\n\n  <ion-avatar item-left (click)="pushPage()">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </ion-avatar>\n\n  <ion-label>\n\n    <h2 (click)="pushPage()">{{deviceinfo.name}}</h2>\n\n    <p (click)="pushPage()"> {{online}}</p>\n\n  </ion-label>\n\n  <div item-right *ngIf="devicetype===wifioutlet">\n\n    <ion-toggle [(ngModel)]="checked" [disabled]="stattype" mode="ios" color="secondary" (ngModelChange)="clickvalue()"></ion-toggle>\n\n  </div>\n\n  <div item-right *ngIf="devicetype===wificurtain">\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus3" (click)="click1();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus2" (click)="click2();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus1" (click)="click3();"></button-curtain-template>\n\n  </div>\n\n</ion-item>\n\n<div *ngIf="type===1" class="equipment-home-item" (click)="pushPage()">\n\n  <div class="equipment-thumbnail">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </div>\n\n  <h2>{{deviceinfo.name}}</h2>\n\n  <p>{{online}}</p>\n\n</div> -->'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app_duer\app\src\components\wifidevice\wifidevice.html"*/
+            selector: 'wifidevice-device',template:/*ion-inline-start:"C:\projects\zhijiatablet\smart_app_duer\app\src\components\wifidevice\wifidevice.html"*/'<div class="ipad-switch" *ngIf="devicetype===wificurtain||devicetype===wificurtain_01">\n\n  <ion-row center>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain active" (click)="click1();"></button>\n\n        <p>关闭</p>\n\n      </ion-col>\n\n      <ion-col text-center>\n\n        <button color="bright" ion-button outline icon-only class="ipad-button-curtain" (click)="click3();"></button>\n\n        <p>开启</p>\n\n      </ion-col>\n\n  </ion-row>\n\n  <ion-row class="ion-row-padding">\n\n    <ion-col col-6 text-left>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-6 text-right>\n\n      <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n    </ion-col>\n\n    <ion-col col-12 >\n\n      <ion-range min="0" max="100" [(ngModel)]="brightness" (ionChange)="change($event)" pin="true" debounce="1000" class="ipad-range-small">\n\n      </ion-range>\n\n    </ion-col>\n\n    <ion-col col-12 text-center>\n\n      <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<div class="ipad-switch" *ngIf="devicetype===wifioutlet">\n\n  <ion-row center class="ion-row-full align-items-center">\n\n    <ion-col text-center>\n\n        <button *ngIf="checked" color="bright" outline ion-button icon-only class="ipad-button-socket" (click)="clickvalue()"></button>\n\n        <button *ngIf="!checked" color="bright" outline ion-button icon-only class="ipad-button-socket active" (click)="clickvalue()"></button>\n\n        <p>{{deviceinfo.name}}</p>\n\n    </ion-col>\n\n  </ion-row>\n\n</div>\n\n\n\n<!-- <div class="ipad-switch">\n\n    <ion-row center>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain"></button>\n\n            <p>开启</p>\n\n        </ion-col>\n\n        <ion-col text-center>\n\n            <button color="bright" ion-button outline icon-only class="ipad-button-curtain active"></button>\n\n            <p>关闭</p>\n\n        </ion-col>\n\n    </ion-row>\n\n    <ion-row class="ion-row-padding">\n\n        <ion-col col-6 text-left>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-guan"></ion-icon>\n\n        </ion-col>\n\n        <ion-col col-6 text-right>\n\n            <ion-icon color="default" class="ipad-icon-switch iconfont icon-chuanglian-kai"></ion-icon>\n\n        </ion-col>\n\n        <ion-col>\n\n            <ion-range class="ipad-range-small" [(ngModel)]="brightness">\n\n            </ion-range>\n\n        </ion-col>\n\n        <ion-col col-12 text-center>\n\n            <p>客厅窗帘</p>\n\n        </ion-col>\n\n    </ion-row>\n\n</div> -->\n\n\n\n<!-- <ion-item  *ngIf="type===0">\n\n  <ion-avatar item-left (click)="pushPage()">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </ion-avatar>\n\n  <ion-label>\n\n    <h2 (click)="pushPage()">{{deviceinfo.name}}</h2>\n\n    <p (click)="pushPage()"> {{online}}</p>\n\n  </ion-label>\n\n  <div item-right *ngIf="devicetype===wifioutlet">\n\n    <ion-toggle [(ngModel)]="checked" [disabled]="stattype" mode="ios" color="secondary" (ngModelChange)="clickvalue()"></ion-toggle>\n\n  </div>\n\n  <div item-right *ngIf="devicetype===wificurtain">\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus3" (click)="click1();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus2" (click)="click2();"></button-curtain-template>\n\n    <button-curtain-template [cmyroundstatus]="buttonstatus1" (click)="click3();"></button-curtain-template>\n\n  </div>\n\n</ion-item>\n\n<div *ngIf="type===1" class="equipment-home-item" (click)="pushPage()">\n\n  <div class="equipment-thumbnail">\n\n    <img src="{{src}}" />\n\n    <span *ngIf="isgroup" class="equipment-item-action-groups"><ion-icon class="iconfont icon-fenlei"></ion-icon></span>\n\n  </div>\n\n  <h2>{{deviceinfo.name}}</h2>\n\n  <p>{{online}}</p>\n\n</div> -->'/*ion-inline-end:"C:\projects\zhijiatablet\smart_app_duer\app\src\components\wifidevice\wifidevice.html"*/
         })
         //wifi设备Component
         ,
@@ -5773,7 +5781,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 324:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5818,7 +5826,7 @@ var CurtainButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 325:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5827,10 +5835,10 @@ var CurtainButtonComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__switch__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_module__ = __webpack_require__(314);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5879,7 +5887,7 @@ var SwitchComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 326:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5929,7 +5937,7 @@ var SwitchrounddelayComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 327:
+/***/ 329:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5987,7 +5995,7 @@ var SwitchButtonDetailed = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 328:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6139,7 +6147,7 @@ var SwitchdetailedaComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 329:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6196,14 +6204,14 @@ var GradientComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 330:
+/***/ 332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoorlockComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(333);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6236,7 +6244,7 @@ var DoorlockComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 331:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6353,14 +6361,14 @@ var DoorlockComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 332:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemonstrationComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(335);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6393,7 +6401,7 @@ var DemonstrationComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 333:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6724,14 +6732,14 @@ var DemonstrationComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AirdetectorComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(337);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6764,7 +6772,7 @@ var AirdetectorComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 335:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6888,14 +6896,14 @@ var AirdetectorComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 336:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemoncameraComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(339);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6928,7 +6936,7 @@ var DemoncameraComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 337:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
