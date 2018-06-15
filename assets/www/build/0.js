@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 309:
+/***/ 307:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_pipe_module__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shebei_shebei_module__ = __webpack_require__(320);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -126,6 +126,24 @@ var DeviceConst = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(DeviceConst, "RFNLTS_11", {
+        get: function () { return "rfnlts-11"; },
+        enumerable: true,
+        configurable: true
+    });
+    ; //雅智智能24G触摸零火单开
+    Object.defineProperty(DeviceConst, "RFNLTS_12", {
+        get: function () { return "rfnlts-12"; },
+        enumerable: true,
+        configurable: true
+    });
+    ; //雅智智能24G触摸零火双开
+    Object.defineProperty(DeviceConst, "RFNLTS_13", {
+        get: function () { return "rfnlts-13"; },
+        enumerable: true,
+        configurable: true
+    });
+    ; //雅智智能24G触摸零火三开
     Object.defineProperty(DeviceConst, "RF_POWERSWITCH_S11", {
         //RF单火 开关型号 
         get: function () { return "rf_powerswitch_s11"; },
@@ -3247,7 +3265,7 @@ var SliderDirective = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtendedOutlet; });
 /* unused harmony export outlet_status */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_localdata_localdata__ = __webpack_require__(36);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3576,7 +3594,7 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__extended_extendedurlimg__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_channel_channel__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_localdata_localdata__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_service__ = __webpack_require__(215);
@@ -4214,6 +4232,7 @@ var SwitchComponent = /** @class */ (function () {
                     }
                     break;
                 }
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_11:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S11:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S31:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S41:
@@ -4239,6 +4258,7 @@ var SwitchComponent = /** @class */ (function () {
                     }
                     break;
                 }
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_12:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S12:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S32:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S42:
@@ -4268,6 +4288,7 @@ var SwitchComponent = /** @class */ (function () {
                     }
                     break;
                 }
+            case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_13:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S13:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S33:
             case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_S43:
@@ -4468,7 +4489,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 321:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4482,7 +4503,7 @@ var outlet_status = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_scene_scene__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_channel_channel__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__event_eventemitter__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_usercenter_usercenter__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -5121,20 +5142,20 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 322:
+/***/ 320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShebeiComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(336);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shebei__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wifidevice_wifidevice_module__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switch_switch_module__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__doorlock_doorlock_module__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demonstration_demonstration_module__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__airdetector_airdetector_module__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__demoncamera_demoncamera_module__ = __webpack_require__(336);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5179,7 +5200,7 @@ var ShebeiComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 323:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5229,6 +5250,9 @@ var ShebeiComponent = /** @class */ (function () {
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].ZWAVE_GATEWAY:
                         this.componenttype = "wifidevice";
                         break;
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_11:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_12:
+                    case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RFNLTS_13:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N11:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N12:
                     case __WEBPACK_IMPORTED_MODULE_1__interfaces_deviceconst__["a" /* DeviceConst */].RF_POWERSWITCH_N13:
@@ -5351,15 +5375,15 @@ var ShebeiComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 324:
+/***/ 322:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WifideviceComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wifidevice__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__churtain_template_component__ = __webpack_require__(324);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5395,7 +5419,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 325:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5405,7 +5429,7 @@ var WifideviceComponentModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_deviceconst__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extended_extendedurlimg__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_equipment_equipment__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_channel_channel__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5781,7 +5805,7 @@ var outlet_status = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 326:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5826,7 +5850,7 @@ var CurtainButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 327:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5835,10 +5859,10 @@ var CurtainButtonComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__switch__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__extendedoutlet__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__switchrounddelay__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_detailed_component__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__switchdetaileda__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gradient_component__ = __webpack_require__(329);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__colorpicker_lib_color_picker_module__ = __webpack_require__(314);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5887,7 +5911,7 @@ var SwitchComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 328:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5937,7 +5961,7 @@ var SwitchrounddelayComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 329:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5995,7 +6019,7 @@ var SwitchButtonDetailed = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 330:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6147,7 +6171,7 @@ var SwitchdetailedaComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 331:
+/***/ 329:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6204,14 +6228,14 @@ var GradientComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 332:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoorlockComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doorlock__ = __webpack_require__(331);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6244,7 +6268,7 @@ var DoorlockComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 333:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6361,14 +6385,14 @@ var DoorlockComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemonstrationComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demonstration__ = __webpack_require__(333);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6401,7 +6425,7 @@ var DemonstrationComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 335:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6732,14 +6756,14 @@ var DemonstrationComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 336:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AirdetectorComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__airdetector__ = __webpack_require__(335);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6772,7 +6796,7 @@ var AirdetectorComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 337:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6896,14 +6920,14 @@ var AirdetectorComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 338:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemoncameraComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demoncamera__ = __webpack_require__(337);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6936,7 +6960,7 @@ var DemoncameraComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 339:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
